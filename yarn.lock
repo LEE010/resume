@@ -3387,6 +3387,11 @@ detect-port-alt@1.1.6:
     address "^1.0.1"
     debug "^2.6.0"
 
+devicon-react-svg@^0.1.7:
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/devicon-react-svg/-/devicon-react-svg-0.1.7.tgz#5ac0c3b59a0f74fbd2bd8bb88262135ead7bc8b1"
+  integrity sha512-Fyh+OchHFrTlGGJ1q0uFlhrX2BeOSzwqfrEu2v472ru6aTUVbudvMD31SdFFjQL5oW/f18/OSx2/fmRfuxfkZQ==
+
 diff-sequences@^24.3.0:
   version "24.3.0"
   resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-24.3.0.tgz#0f20e8a1df1abddaf4d9c226680952e64118b975"
