@@ -1,9 +1,8 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import ProfileImg from './profile/ProfileImg'
 import ProfileContent from './profile/ProfileContent'
 import './scss/Profile.scss';
 import { Grid } from '@material-ui/core';
-import profile_img from './img/profile.jpg';
 
 class Profile extends Component {
     render() {

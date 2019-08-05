@@ -5,8 +5,7 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Footer from "./Footer";
-import { Container } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+import { Container, Divider } from '@material-ui/core';
 
 class App extends Component {
   render() {
@@ -14,9 +13,13 @@ class App extends Component {
       <Fragment>
         <Container fixed>
           <Profile/>
+          <Divider/>
           <About />
+          <Divider/>
           <Skills />
+          <Divider/>
           <Experience />
+          <Divider/>
           <Projects />
         </Container>
         <Footer/>

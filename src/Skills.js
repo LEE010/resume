@@ -1,12 +1,41 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
+import { Typography, Grid } from '@material-ui/core';
+import SkillsList from './skills/SkillsList'
 
 class Skills extends Component {
-    render() {
-        return (
-          <section>
-            Skills
-          </section>
-        );
+  static defaultProps = {
+    lists: [
+      { 'head':'coding',
+        'items':[{ 'name':'C', 'level':3 },
+                { 'name':'C++', 'level':2 },
+                { 'name':'Java', 'level':2 },
+                { 'name':'JavaScript', 'level':3 },
+                { 'name':'Python3', 'level':4 },
+                { 'name':'Ruby', 'level':3 },
+                { 'name':'HTML', 'level':3 },
+                { 'name':'CSS', 'level':2 }] }
+      ]
     }
+
+  render() {
+    const { lists } = this.props;
+    const skills = lists.map(
+      list => (<SkillsList key={list.index} head={list.head} items={list.items}/>)
+    );
+
+    return (
+      <section>
+        <Typography variant='h1'>Skills</Typography>
+          <Grid
+            container
+            direction="col"
+            justify="center"
+            alignItems="center"
+          >
+            {skills}
+          </Grid>
+      </section>
+    );
+  }
 }
 export default Skills;
