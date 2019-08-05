@@ -13,7 +13,6 @@ class App extends Component {
     return (
       <Fragment>
         <Container fixed>
-          <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} />
           <Profile/>
           <About />
           <Skills />
