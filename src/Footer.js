@@ -1,13 +1,39 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
+// import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
 
-class Footer extends Component {
-    render() {
-        return (
-          <Fragment>
-            Experience
-          </Fragment>
-
-        );
-    }
+function MadeWithLove() {
+  return (
+    <Typography variant="body2" color="textSecondary">
+      {'Built with love by the '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Material-UI
+      </Link>
+      {' team.'}
+    </Typography>
+  );
 }
-export default Footer;
+
+const useStyles = makeStyles(theme => ({
+  footer: {
+    padding: theme.spacing(2),
+    marginTop: 'auto',
+    backgroundColor: 'white',
+  },
+}));
+
+export default function Footer() {
+  const classes = useStyles();
+
+  return (
+    <footer className={classes.footer}>
+      <Container maxWidth="sm">
+        <Typography variant="body1">My sticky footer can be found here.</Typography>
+        <MadeWithLove />
+      </Container>
+    </footer>
+  );
+}

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import { Typography, Grid, Card, CardActionArea, CardActions, CardContent, CardMedia, Button,CardHeader } from '@material-ui/core';
+import { Typography, Grid, Card, CardActionArea, CardActions, CardContent, CardMedia, CardHeader } from '@material-ui/core';
+import ProjectModal from './ProjectModal';
 
 class ProjectList extends Component {
     render() {
@@ -31,9 +32,7 @@ class ProjectList extends Component {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
-                  Learn More
-                </Button>
+                <ProjectModal/>
               </CardActions>
             </Card>
           </Grid>
