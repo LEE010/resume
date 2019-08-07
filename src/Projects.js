@@ -30,14 +30,14 @@ class Projects extends Component {
     render() {
       const { projects } = this.props;
       const project_list = projects.map(
-        project => (<ProjectList key={project.index} name={project.name} comment={project.comment} img={project.img_dir}/>)
+        project => (<ProjectList key={'project-'+project.name} name={project.name} comment={project.comment} img={project.img_dir}/>)
       );
       return (
         <section>
           <Typography variant='h1'>PROJECTS</Typography>
             <Grid
               container
-              direction="col"
+              direction="row"
               justify="center"
               alignItems="center"
             >

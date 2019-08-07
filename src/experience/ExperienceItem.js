@@ -7,11 +7,12 @@ class ExperienceItem extends Component {
       const subname = this.props.exp.subname;
       const date = this.props.exp.date;
       const content = this.props.exp.content;
+      const rank = this.props.exp.rank
 
         return (
           <Fragment>
             <TimelineItem
-              key={this.props.key}
+              key={rank}
               dateText={date}
               style={{ color: '#e86971' }}
             >

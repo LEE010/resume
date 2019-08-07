@@ -5,7 +5,7 @@ import SkillsItem from './SkillsItem';
 class SkillsList extends Component {
     render() {
       const items = this.props.items.map(
-      item => (<SkillsItem id={item.name} item={item}/>)
+      item => (<SkillsItem key={this.props.head+item.name} item={item}/>)
     );
         return (
           <Fragment>

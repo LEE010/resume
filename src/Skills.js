@@ -20,7 +20,7 @@ class Skills extends Component {
   render() {
     const { lists } = this.props;
     const skills = lists.map(
-      list => (<SkillsList key={list.index} head={list.head} items={list.items}/>)
+      list => (<SkillsList key={'skills-'+list.head} head={list.head} items={list.items}/>)
     );
 
     return (
@@ -28,7 +28,7 @@ class Skills extends Component {
         <Typography variant='h1'>Skills</Typography>
           <Grid
             container
-            direction="col"
+            direction="column"
             justify="center"
             alignItems="center"
           >
