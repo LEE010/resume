@@ -5,12 +5,14 @@ import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Footer from "./Footer";
+import NavBar from "./NavBar";
 import { Container, Divider } from '@material-ui/core';
 
 class App extends Component {
   render() {
     return (
       <Fragment>
+        <NavBar/>
         <Container fixed>
           <Profile/>
           <Divider/>
