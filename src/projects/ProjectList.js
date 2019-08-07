@@ -40,10 +40,5 @@ class ProjectList extends Component {
       );
     }
 }
-// ProjectList.propTypes =  {
-//   'name': React.PropTypes.string.isRequired,
-//   'comment': React.PropTypes.string.isRequired,
-//   'img_dir': React.PropTypes.string.isRequired
-//
-// };
+
 export default ProjectList;
