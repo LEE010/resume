@@ -6,13 +6,13 @@ import Icon from '@material-ui/core/Icon';
 function ProfileContent() {
   return (
     <div>
-      <Typography variant='h3'>이동현</Typography>
-      <Typography variant='h4'>Lee Dong Hyun</Typography>
-      <Typography>
+      <h2>이동현</h2>
+      <h3>Lee Dong Hyun</h3>
+      <p>
         <Icon>phone</Icon>010-2055-0328
         <DevIcon icon="github_badge" />
         <Icon>mail_outline</Icon>
-      </Typography>
+      </p>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { Typography, Grid, Card, CardActionArea, CardActions, CardContent, CardMedia, CardHeader } from '@material-ui/core';
 import ProjectModal from './ProjectModal';
-
+import '../scss/Projects.scss'
 class ProjectList extends Component {
     render() {
       const name = this.props.name;
@@ -10,7 +10,7 @@ class ProjectList extends Component {
 
       return (
         <Fragment>
-          <Grid item xs={12} sm={12} md={3}>
+          <Grid item xs={12} sm={12} md={3} className='Card'>
             <Card>
               <CardActionArea>
                 <CardHeader

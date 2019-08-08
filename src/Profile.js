@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import ProfileImg from './profile/ProfileImg'
 import ProfileContent from './profile/ProfileContent'
-import './scss/Profile.scss';
 import { Grid } from '@material-ui/core';
+import './scss/Profile.scss';
 
 class Profile extends Component {
     render() {
         return (
           <section className="Profile">
-            Profile
             <Grid
               container
               direction="column"

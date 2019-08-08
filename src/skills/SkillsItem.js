@@ -1,5 +1,8 @@
 import React, { Component, Fragment } from 'react';
 import { Typography, Grid, Paper } from '@material-ui/core';
+import '../scss/Skills.scss';
+
+// console.log(MyComponent)
 
 class SkillsItem extends Component {
     render() {
@@ -7,11 +10,11 @@ class SkillsItem extends Component {
 
       return (
         <Fragment>
-          <Grid item sm={12} md={6}>
-            <Paper>
-              <Typography>
+          <Grid item xs={12} sm={6} className='Skills'>
+            <Paper className='item_div'>
+              <h3 className='head'>
                 {item.name}
-              </Typography>
+              </h3>
               <Typography>
                 {item.level}
               </Typography>

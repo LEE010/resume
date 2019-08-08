@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Typography, Grid } from '@material-ui/core';
 import SkillsItem from './SkillsItem';
 
+
 class SkillsList extends Component {
     render() {
       const items = this.props.items.map(
@@ -9,7 +10,7 @@ class SkillsList extends Component {
     );
         return (
           <Fragment>
-            <Typography variant='h3'>{this.props.head}</Typography>
+            <h2>{this.props.head}</h2>
             <Grid
               container
               direction="row"

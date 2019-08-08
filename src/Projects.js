@@ -34,7 +34,7 @@ class Projects extends Component {
       );
       return (
         <section>
-          <Typography variant='h1'>PROJECTS</Typography>
+          <h1>projects</h1>
             <Grid
               container
               direction="row"

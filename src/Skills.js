@@ -25,7 +25,7 @@ class Skills extends Component {
 
     return (
       <section>
-        <Typography variant='h1'>Skills</Typography>
+        <h1>Skills</h1>
           <Grid
             container
             direction="column"

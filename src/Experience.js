@@ -64,7 +64,7 @@ class Experience extends Component {
     );
       return (
         <section>
-          <Typography variant='h1'>Experience</Typography>
+          <h1>Experience</h1>
           <Paper>
             <Timeline lineColor={'#ddd'}>
               { timeline_items }
