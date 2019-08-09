@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Grid } from '@material-ui/core';
+import NavBar from './NavBar'
 import './scss/Header.scss'
 // import { Grid } from '@material-ui/core';
 
@@ -7,6 +8,7 @@ class Header extends Component {
     render() {
         return (
           <header>
+            <NavBar/>
             <section>
               <Grid
                 container

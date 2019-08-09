@@ -12,9 +12,7 @@ class About extends Component {
                 justify="center"
                 alignItems="center"
               >
-                <Grid item xs={12}>
-                  <h1>더 나은 결과를 위해 최선을 다합니다.</h1>
-                </Grid>
+                
                 <Grid item xs={12}>
                   <p>
                     SW에 확신을 가지고 본격적으로 공부를 시작한 지 2년이 채 되지 않은 기간 동안,
@@ -32,7 +30,7 @@ class About extends Component {
                     현재는 여러 유형의 빅데이터를 처리하면서 코드의 효율성에 대해 절감하고,
                     조금 더 나은 코드를 작성하기 위해 알고리즘 학습에 전념하고 있습니다.
                   </p>
-                
+
                 </Grid>
               </Grid>
             </Paper>

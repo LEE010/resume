@@ -37,7 +37,7 @@ export default function NavBar(props) {
       <HideOnScroll {...props}>
         <AppBar>
           <Toolbar>
-            <Typography variant="h6">Scroll to Hide App Bar</Typography>
+            <Typography variant="h6">LEE-DONG-HYUN</Typography>
           </Toolbar>
         </AppBar>
       </HideOnScroll>
