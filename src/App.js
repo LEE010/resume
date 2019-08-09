@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import Header from "./Header"
 import Profile from "./Profile";
 import About from "./About";
 import Skills from "./Skills";
@@ -12,7 +13,8 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <NavBar/>
+        <Header/>
+        
         <Container fixed>
           <Profile/>
           <About />

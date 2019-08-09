@@ -10,14 +10,15 @@ class Profile extends Component {
           <section className="Profile">
             <Grid
               container
-              direction="column"
+              direction="row"
               justify="center"
               alignItems="center"
+              spacing={5}
             >
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <ProfileImg/>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <ProfileContent/>
               </Grid>
             </Grid>

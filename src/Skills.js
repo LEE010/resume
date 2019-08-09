@@ -31,6 +31,7 @@ class Skills extends Component {
             direction="column"
             justify="center"
             alignItems="center"
+            spacing={2}
           >
             {skills}
           </Grid>

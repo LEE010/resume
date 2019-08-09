@@ -1,0 +1,19 @@
+.header {
+  height: 810px;
+  background-image: url('../img/header.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter:opacity(80%);
+
+
+  img {
+    width: 100%;
+  }
+  .resume-title {
+    color: white;
+    background-color: rgba(0,0,0,1);
+    float: center;
+    text-align: center;
+  }
+}

@@ -40,6 +40,7 @@ class Projects extends Component {
               direction="row"
               justify="center"
               alignItems="center"
+              spacing={2}
             >
               {project_list}
             </Grid>
