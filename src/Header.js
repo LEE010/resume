@@ -1,30 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Grid } from '@material-ui/core';
-import NavBar from './NavBar'
 import './scss/Header.scss'
-// import { Grid } from '@material-ui/core';
+import HeaderImg from './img/header.jpg';
 
-class Header extends Component {
-    render() {
-        return (
-          <header>
-            <NavBar/>
-            <section>
-              <Grid
-                container
-                justify="center"
-                alignItems="center"
-                spacing={5}
-                className='header'
-                >
-                <div className='resume-title'>
-                  <h1>가나다라마바사아자차카타파하</h1>
-                </div>
-              </Grid>
+function Header() {
+  return (
+    <section className='header'>
+      <Grid
+        container
+        justify="center"
+        alignItems="center"
+        spacing={5}
+        >
+        <img src={HeaderImg}></img>
+        <div className='resume-title'>
+          <h1>더 나은 결과를 위해 최선을 다합니다.</h1>
+        </div>
+      </Grid>
 
-            </section>
-          </header>
-        );
-    }
+    </section>
+  );
 }
 export default Header;

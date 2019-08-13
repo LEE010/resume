@@ -1,31 +1,126 @@
 import React, { Component, Fragment } from 'react';
-import Header from "./Header"
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import List from '@material-ui/core/List';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 import Profile from "./Profile";
+import Header from "./Header";
 import About from "./About";
 import Skills from "./Skills";
 import Experience from "./Experience";
 import Projects from "./Projects";
 import Footer from "./Footer";
-import NavBar from "./NavBar";
 import { Container } from '@material-ui/core';
 
+const drawerWidth = 240;
+
+const Styles = theme => ({
+  root: {
+    display: 'flex',
+  },
+  appBar: {
+    zIndex: theme.zIndex.drawer + 1,
+  },
+  drawer: {
+    width: drawerWidth,
+    flexShrink: 0,
+  },
+  drawerPaper: {
+    width: drawerWidth,
+  },
+  content: {
+    flexGrow: 1,
+    // padding: theme.spacing(3),
+  },
+  toolbar: theme.mixins.toolbar,
+});
+
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.handleDrawerOpen = this.handleDrawerOpen.bind(this);
+    this.handleDrawerClose = this.handleDrawerClose.bind(this);
+    this.state = {
+      open: false,
+      // setOpen: false,
+      direction: false,
+    };
+  }
+
+  handleDrawerOpen() {
+    this.setState({
+      open:true,
+      direction:true,
+    });
+  };
+
+  handleDrawerClose() {
+    this.setState({
+      open:false,
+      direction:false,
+    });
+  };
   render() {
+    const { classes } = this.props;
+
     return (
       <Fragment>
-        <Header/>
-        
-        <Container fixed>
-          <Profile/>
-          <About />
-          <Skills />
-          <Experience />
-          <Projects />
-        </Container>
-        <Footer/>
+        <div className={classes.root}>
+          <CssBaseline />
+          <AppBar position="fixed" className={classes.appBar}>
+            <Toolbar>
+              <Typography variant="h6" noWrap>
+                LEE-DONG-HYUN
+              </Typography>
+            </Toolbar>
+          </AppBar>
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper,
+            }}
+          >
+            <div className={classes.toolbar} />
+            <div>
+              <Profile/>
+            </div>
+            <Divider />
+            <List>
+              {['About', 'Skills', 'Experience', 'Projects'].map((text) => (
+                <ListItem button key={text}>
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
+            </List>
+          </Drawer>
+          <main className={classes.content}>
+            <div className={classes.toolbar} />
+            <Header/>
+              <Container fixed>
+                <About />
+                <Skills />
+                <Experience />
+                <Projects />
+              </Container>
+              <Footer/>
+          </main>
+        </div>
+
       </Fragment>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(Styles)(App);
