@@ -10,6 +10,9 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
+import Link from '@material-ui/core/Link';
+import Slide from '@material-ui/core/Slide';
+import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Profile from "./Profile";
 import Header from "./Header";
 import About from "./About";
@@ -41,6 +44,16 @@ const Styles = theme => ({
   },
   toolbar: theme.mixins.toolbar,
 });
+
+function HideOnScroll(props) {
+  const { children, window } = props;
+  const trigger = useScrollTrigger({ target: window ? window() : undefined });
+  return (
+    <Slide appear={false} direction="down" in={!trigger}>
+      {children}
+    </Slide>
+  );
+}
 
 class App extends Component {
   constructor(props){
@@ -74,13 +87,17 @@ class App extends Component {
       <Fragment>
         <div className={classes.root}>
           <CssBaseline />
-          <AppBar position="fixed" className={classes.appBar}>
-            <Toolbar>
-              <Typography variant="h6" noWrap>
-                LEE-DONG-HYUN
-              </Typography>
-            </Toolbar>
-          </AppBar>
+          <HideOnScroll {...this.props}>
+            <AppBar position="fixed" className={classes.appBar}>
+              <Toolbar>
+                <Typography variant="h6" noWrap>
+                  <Link href='#Header' color="inherit" underline='none'>
+                    LEE-DONG-HYUN
+                  </Link>
+                </Typography>
+              </Toolbar>
+            </AppBar>
+          </HideOnScroll>
           <Drawer
             className={classes.drawer}
             variant="permanent"
@@ -95,14 +112,13 @@ class App extends Component {
             <Divider />
             <List>
               {['About', 'Skills', 'Experience', 'Projects'].map((text) => (
-                <ListItem button key={text}>
+                <ListItem button key={text} component='a' href={'#'+text}>
                   <ListItemText primary={text} />
                 </ListItem>
               ))}
             </List>
           </Drawer>
           <main className={classes.content}>
-            <div className={classes.toolbar} />
             <Header/>
               <Container fixed>
                 <About />

@@ -3,7 +3,7 @@ import { Grid, Paper } from '@material-ui/core';
 
 function About() {
   return (
-    <section>
+    <section id='About'>
       <h1>about</h1>
       <Paper>
         <Grid

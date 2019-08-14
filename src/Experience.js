@@ -3,7 +3,7 @@ import ExperienceItem from './experience/ExperienceItem'
 import { Paper } from '@material-ui/core';
 import { Timeline }  from 'vertical-timeline-component-for-react';
 
-const exps = [
+const EXPS = [
   {
     'rank':0,
     'name':'Google Study Jam',
@@ -55,9 +55,9 @@ const exps = [
   },
 ];
 function Experience() {
-  const timeline_items = exps.map(exp => ExperienceItem(exp));
+  const timeline_items = EXPS.map(exp => ExperienceItem(exp));
     return (
-      <section>
+      <section id='Experience'>
         <h1>Experience</h1>
         <Paper>
           <Timeline lineColor={'#ddd'}>

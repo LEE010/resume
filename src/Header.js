@@ -5,7 +5,7 @@ import HeaderImg from './img/header.jpg';
 
 function Header() {
   return (
-    <section className='header'>
+    <section className='header' id='Header'>
       <Grid
         container
         justify="center"

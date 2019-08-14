@@ -17,7 +17,7 @@ function Skills() {
   const skills = SKILLS.map(skill => SkillsList(skill));
 
   return (
-    <section className='Skills'>
+    <section className='Skills' id='Skills'>
       <h1>Skills</h1>
       {skills}
     </section>

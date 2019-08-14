@@ -6,22 +6,21 @@ import './scss/Profile.scss';
 
 function Profile() {
   return (
-    <section className="Profile">
-      <Grid
-        container
-        direction="column"
-        justify="center"
-        alignItems="center"
-        spacing={5}
-      >
-        <Grid item xs={12}>
-          <ProfileImg/>
-        </Grid>
-        <Grid item xs={12}>
-          <ProfileContent/>
-        </Grid>
+    <Grid
+      container
+      direction="column"
+      justify="center"
+      alignItems="center"
+      spacing={5}
+      className="Profile"
+    >
+      <Grid item xs={12}>
+        <ProfileImg/>
       </Grid>
-    </section>
+      <Grid item xs={12}>
+        <ProfileContent/>
+      </Grid>
+    </Grid>
   );
 }
 

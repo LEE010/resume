@@ -30,7 +30,7 @@ function Projects() {
     project => (<ProjectList key={'project-'+project.name} project={project}/>)
   );
   return (
-    <section>
+    <section id='Projects'>
       <h1>projects</h1>
         <Grid
           container
