@@ -1,6 +1,19 @@
 import React from 'react';
-import { Typography, Grid, Paper } from '@material-ui/core';
+import { Typography, Grid, Paper, LinearProgress } from '@material-ui/core';
+import { lighten, withStyles } from '@material-ui/core/styles';
 import '../scss/Skills.scss';
+
+const BorderLinearProgress = withStyles({
+  root: {
+    height: 10,
+    borderRadius: 20,
+    backgroundColor: lighten('#ff6c5c', 0.5),
+  },
+  bar: {
+    borderRadius: 20,
+    backgroundColor: '#ff6c5c',
+  },
+})(LinearProgress);
 
 function SkillsItem(item, skill_name) {
   return (
@@ -11,9 +24,7 @@ function SkillsItem(item, skill_name) {
         <h3 className='head'>
           {item.name}
         </h3>
-        <Typography>
-          {item.level}
-        </Typography>
+        <BorderLinearProgress variant="determinate" value={item.level*20} />
       </Paper>
     </Grid>
   );
