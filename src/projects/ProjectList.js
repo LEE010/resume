@@ -7,9 +7,14 @@ import {
   CardMedia,
   CardHeader,
   Button,
-  Modal
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
  } from '@material-ui/core';
-import '../scss/Projects.scss'
+import '../scss/Projects.scss';
+import ProjectModalStepper from './ProjectModalStepper';
 
 class ProjectList extends Component {
   constructor(props) {
@@ -18,24 +23,9 @@ class ProjectList extends Component {
     this.handleClose = this.handleClose.bind(this);
 
     this.state = {
-      // height: 0,
-      // width: 0,
       modal_open: false,
     };
-
-    // window.addEventListener("resize", this.update);
   };
-
-  // componentDidMount() {
-  //   this.update();
-  // };
-
-  // update = () => {
-  //   this.setState({
-  //     height: window.innerHeight,
-  //     width: window.innerWidth
-  //   });
-  // };
 
   handleOpen() {
     this.setState({
@@ -52,6 +42,7 @@ class ProjectList extends Component {
     const name = this.props.project.name;
     const comment = this.props.project.comment;
     const img_dir = this.props.project.img_dir;
+    const page = this.props.project.page;
 
     return (
       <Fragment>
@@ -81,19 +72,42 @@ class ProjectList extends Component {
           </Card>
         </Grid>
 
-        <Modal
-          aria-labelledby="simple-modal-title"
-          aria-describedby="simple-modal-description"
+        <Dialog
           open={this.state.modal_open}
           onClose={this.handleClose}
+          fullScreen={true}
+          scroll='paper'
         >
-          <div>
-            <h2 id="simple-modal-title">{name}</h2>
-            <p id="simple-modal-description">
-              {comment}
-            </p>
-          </div>
-        </Modal>
+          <DialogTitle id="scroll-dialog-title">{name}</DialogTitle>
+          <DialogContent>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              alignItems="center"
+              spacing={5}
+            >
+              <Grid item xs={12}>
+                <ProjectModalStepper name={name} page={page} />
+              </Grid>
+
+              <Grid item xs={12}>
+                <DialogContentText>
+                  {comment}
+                </DialogContentText>
+              </Grid>
+            </Grid>
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={this.handleClose} color="primary">
+              Cancel
+            </Button>
+            <Button onClick={this.handleClose} color="primary">
+              Subscribe
+            </Button>
+          </DialogActions>
+
+        </Dialog>
       </Fragment>
     );
   }

@@ -1,4 +1,11 @@
-.Card-buttons{
-  text-align: right !important;
-  // justify-content: flex-end;
+.Projects {
+  .Card-buttons{
+    text-align: right !important;
+    // justify-content: flex-end;
+  }
+  .modal {
+    img {
+      width: 100%;
+    }
+  }
 }
