@@ -12,14 +12,14 @@ const SKILLS = [
           {
             'head':'',
             'items':[
-              { 'name':'C', 'level':3 },
-              { 'name':'C++', 'level':2 },
-              { 'name':'Java', 'level':2 },
-              { 'name':'JavaScript', 'level':3 },
-              { 'name':'Python3', 'level':4 },
-              { 'name':'Ruby', 'level':3 },
-              { 'name':'HTML', 'level':3 },
-              { 'name':'CSS', 'level':2 }
+              { 'name':'C', 'level':3, 'techs':[] },
+              { 'name':'C++', 'level':2, 'techs':[] },
+              { 'name':'Java', 'level':2, 'techs':[] },
+              { 'name':'JavaScript', 'level':3, 'techs':[] },
+              { 'name':'Python3', 'level':4, 'techs':[] },
+              { 'name':'Ruby', 'level':3, 'techs':[] },
+              { 'name':'HTML', 'level':3, 'techs':[] },
+              { 'name':'CSS', 'level':2, 'techs':[] }
             ]
           }
         ]
@@ -35,17 +35,17 @@ const SKILLS = [
           {
             'head':'Front-end',
             'items':[
-              { 'name':'Bootstrap', 'level':3 },
-              { 'name':'jQuery', 'level':2 },
-              { 'name':'Sass', 'level':2 }
+              { 'name':'Bootstrap', 'level':3, 'techs':['HTML','CSS','JS'] },
+              { 'name':'jQuery', 'level':2, 'techs':[] },
+              { 'name':'Sass', 'level':2, 'techs':[] }
             ]
           },
           {
             'head':'Back-end',
             'items':[
-              { 'name':'Ruby on Rails', 'level':3 },
-              { 'name':'Django','level':3 },
-              { 'name':'Spring','level':1 }
+              { 'name':'Ruby on Rails', 'level':3, 'techs':[] },
+              { 'name':'Django','level':3, 'techs':[] },
+              { 'name':'Spring','level':1, 'techs':[] }
             ]
           }
         ]
@@ -56,48 +56,56 @@ const SKILLS = [
           {
             'head':'Preprocessing',
             'items':[
-              {'name':'Numpy','level':2},
-              {'name':'Pandas','level':3}
+              {'name':'Numpy','level':2, 'techs':[]},
+              {'name':'Pandas','level':3, 'techs':[]}
             ]
           },
           {
             'head':'Visualization',
             'items':[
-              {'name':'matplotlib','level':2},
-              {'name':'Seaborn','level':2}
+              {'name':'matplotlib','level':2, 'techs':[]},
+              {'name':'Seaborn','level':2, 'techs':[]}
             ]
           },
           {
             'head':'Machine-learning',
             'items':[
-              {'name':'Scipy','level':3},
-              {'name':'Scikit-learn','level':2}
+              {'name':'Scipy','level':3, 'techs':[]},
+              {'name':'Scikit-learn','level':2, 'techs':[]}
             ]
           },
           {
             'head':'Deep-learning',
             'items':[
-              {'name':'TensorFlow','level':1}
+              {'name':'TensorFlow','level':1, 'techs':[]}
             ]
           },
         ]
-      },
-      {
-        'category':'ETC',
-        'heads':[{
-          'head':'',
-          'items':[
-            {'name':'Ubuntu','level':3},
-            {'name':'Anaconda','level':3},
-            {'name':'Shell Script','level':1},
-            {'name':'FFmpeg','level':1},
-            {'name':'SoX','level':1},
-            {'name':'ImageMagick','level':1},
-          ]
-        }]
       }
     ],
-  }
+  },
+  {
+    'title':'ETC',
+    'categorys':[
+      {
+        'category':'',
+        'heads': [
+          {
+            'head':'',
+            'items':[
+              {'name':'Ubuntu','level':3, 'techs':[]},
+              {'name':'Anaconda','level':3, 'techs':[]},
+              {'name':'Shell Script','level':1, 'techs':[]},
+              {'name':'FFmpeg','level':1, 'techs':[]},
+              {'name':'SoX','level':1, 'techs':[]},
+              {'name':'ImageMagick','level':1, 'techs':[]},
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
 ];
 function SkillCategorys(skill) {
   const category_list = skill.categorys.map(category => SkillsCategory(category))

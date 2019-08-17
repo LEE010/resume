@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Paper, LinearProgress } from '@material-ui/core';
+import { Typography, Grid, Paper, LinearProgress, Chip } from '@material-ui/core';
 import { lighten, withStyles } from '@material-ui/core/styles';
 import '../scss/Skills.scss';
 
@@ -15,15 +15,25 @@ const BorderLinearProgress = withStyles({
   },
 })(LinearProgress);
 
+function TechChips(tech, name) {
+  return(
+    <Chip size="small" label={tech} key={name+'-'+tech}/>
+  );
+}
+
 function SkillsItem(item) {
+  const name = item.name
+  const chips = item.techs.map(tech => TechChips(tech, name));
+
   return (
     <Grid item xs={12} sm={6}
-      key={ '-'+item.name}
+      key={ '-'+ name}
       >
       <Paper className='item_div'>
         <h5 className='head'>
-          {item.name}
+          {name}
         </h5>
+        <div>{chips}</div>
         <BorderLinearProgress variant="determinate" value={item.level*20} />
       </Paper>
     </Grid>
