@@ -10,6 +10,20 @@ const EXPS = [
     'subname':'머신러닝 심화반',
     'date':'2019/06 - 2019/07',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+        'details':[
+          {
+            'name':'a',
+            'imgs':'/images/experience/study-jam',
+            'comment':'아야여어오요우유으이',
+          }
+        ]
+      }
+    ]
   },
   {
     'rank':1,
@@ -17,6 +31,13 @@ const EXPS = [
     'subname':'데이터에서 스토리 탐색하기',
     'date':'2019/04 - 2019/05',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'b',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+      }
+    ]
   },
   {
     'rank':2,
@@ -24,6 +45,13 @@ const EXPS = [
     'subname':'포스코 인재창조원, 포항공과대학 정보통신연구소',
     'date':'2019/01 - 2019/04',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'c',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+      }
+    ]
   },
   {
     'rank':3,
@@ -31,6 +59,13 @@ const EXPS = [
     'subname':'머신러닝 심화반',
     'date':'2018/07 - 2018/08',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'d',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+      }
+    ]
   },
   {
     'rank':4,
@@ -38,6 +73,13 @@ const EXPS = [
     'subname':'학교 운영진',
     'date':'2018/01 - 현재',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'e',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+      }
+    ]
   },
   {
     'rank':5,
@@ -45,6 +87,13 @@ const EXPS = [
     'subname':'배관공',
     'date':'2016/06 - 2017/08',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'f',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+      }
+    ]
   },
   {
     'rank':6,
@@ -52,6 +101,13 @@ const EXPS = [
     'subname':'정보통신학',
     'date':'2012/03 - 2019/01',
     'content':'가나다라마바사 아자차카타파하',
+    'details':[
+      {
+        'name':'g',
+        'imgs':'/images/experience/study-jam',
+        'comment':'아야여어오요우유으이',
+      }
+    ]
   },
 ];
 function Experience() {
@@ -59,11 +115,9 @@ function Experience() {
     return (
       <section id='Experience'>
         <h1>Experience</h1>
-        <Paper>
           <Timeline lineColor={'#ddd'}>
             { timeline_items }
           </Timeline>
-        </Paper>
       </section>
     );
   }
