@@ -75,7 +75,8 @@ class ProjectList extends Component {
         <Dialog
           open={this.state.modal_open}
           onClose={this.handleClose}
-          fullScreen={true}
+          maxWidth='lg'
+          fullWidth={true}
           scroll='paper'
         >
           <DialogTitle id="scroll-dialog-title">{name}</DialogTitle>

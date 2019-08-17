@@ -15,15 +15,15 @@ const BorderLinearProgress = withStyles({
   },
 })(LinearProgress);
 
-function SkillsItem(item, skill_name) {
+function SkillsItem(item) {
   return (
     <Grid item xs={12} sm={6}
-      key={ skill_name+'-'+item.name}
+      key={ '-'+item.name}
       >
       <Paper className='item_div'>
-        <h3 className='head'>
+        <h5 className='head'>
           {item.name}
-        </h3>
+        </h5>
         <BorderLinearProgress variant="determinate" value={item.level*20} />
       </Paper>
     </Grid>
