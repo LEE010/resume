@@ -4,7 +4,7 @@ import { Grid, Paper } from '@material-ui/core';
 function About() {
   return (
     <section id='About'>
-      <h1>about</h1>
+      <h1>About</h1>
       <Paper>
         <Grid
           container
@@ -26,6 +26,8 @@ function About() {
             <p>
               이러한 과정을 거치며 현재 상황에서 선택할 수 있는 최적의 방법을 찾기 위해 고민하고 이에 따라
               다양한 방법론을 고려하기 위해 새로운 방식뿐만 아니라 고전적인 방식까지 숙지하기 위해 노력하고 있습니다.
+            </p>
+            <p>
               현재는 여러 유형의 빅데이터를 처리하면서 코드의 효율성에 대해 절감하고,
               조금 더 나은 코드를 작성하기 위해 알고리즘 학습에 전념하고 있습니다.
             </p>

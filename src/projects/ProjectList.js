@@ -40,18 +40,19 @@ class ProjectList extends Component {
   };
   render() {
     const name = this.props.project.name;
-    const comment = this.props.project.comment;
+    const subname = this.props.project.subname;
+    const comment = this.props.project.comment.map( c => <p>{c}</p>);
     const img_dir = this.props.project.img_dir;
     const page = this.props.project.page;
 
     return (
       <Fragment>
-        <Grid item xs={12} sm={12} md={3} className='Card'>
+        <Grid item xs={12} sm={12} md={6} className='Card'>
           <Card>
             <CardActionArea onClick={this.handleOpen}>
               <CardHeader
                 title={name}
-                subheader="September 14, 2016"
+                subheader={subname}
               />
               <CardMedia
                 style={{ height: 0, paddingTop: '100%'}}
@@ -81,23 +82,10 @@ class ProjectList extends Component {
         >
           <DialogTitle id="scroll-dialog-title">{name}</DialogTitle>
           <DialogContent>
-            <Grid
-              container
-              direction="column"
-              justify="center"
-              alignItems="center"
-              spacing={5}
-            >
-              <Grid item xs={12}>
-                <ProjectModalStepper name={name} page={page} />
-              </Grid>
-
-              <Grid item xs={12}>
-                <DialogContentText>
-                  {comment}
-                </DialogContentText>
-              </Grid>
-            </Grid>
+            <ProjectModalStepper name={name} page={page} />
+            <DialogContentText>
+              {comment}
+            </DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">

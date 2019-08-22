@@ -5,7 +5,7 @@ import { Avatar } from '@material-ui/core';
 
 function ProfileImg() {
   return (
-    <Avatar alt="profile" src={ profile_img } className='left'/>
+    <Avatar alt="profile" src={ profile_img } />
   );
 }
 export default ProfileImg;

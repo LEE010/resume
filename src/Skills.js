@@ -14,12 +14,12 @@ const SKILLS = [
             'items':[
               { 'name':'C', 'level':3, 'techs':[] },
               { 'name':'C++', 'level':2, 'techs':[] },
-              { 'name':'Java', 'level':2, 'techs':[] },
-              { 'name':'JavaScript', 'level':3, 'techs':[] },
               { 'name':'Python3', 'level':4, 'techs':[] },
+              { 'name':'Java', 'level':2, 'techs':[] },
               { 'name':'Ruby', 'level':3, 'techs':[] },
               { 'name':'HTML', 'level':3, 'techs':[] },
-              { 'name':'CSS', 'level':2, 'techs':[] }
+              { 'name':'CSS', 'level':2, 'techs':[] },
+              { 'name':'JavaScript', 'level':3, 'techs':[] },
             ]
           }
         ]
@@ -36,16 +36,16 @@ const SKILLS = [
             'head':'Front-end',
             'items':[
               { 'name':'Bootstrap', 'level':3, 'techs':['HTML','CSS','JS'] },
-              { 'name':'jQuery', 'level':2, 'techs':[] },
-              { 'name':'Sass', 'level':2, 'techs':[] }
+              { 'name':'jQuery', 'level':2, 'techs':['JS'] },
+              { 'name':'Sass', 'level':2, 'techs':['CSS'] }
             ]
           },
           {
             'head':'Back-end',
             'items':[
-              { 'name':'Ruby on Rails', 'level':3, 'techs':[] },
-              { 'name':'Django','level':3, 'techs':[] },
-              { 'name':'Spring','level':1, 'techs':[] }
+              { 'name':'Ruby on Rails', 'level':3, 'techs':['Ruby'] },
+              { 'name':'Django','level':3, 'techs':['Python3'] },
+              { 'name':'Spring','level':1, 'techs':['Java'] }
             ]
           }
         ]
@@ -63,15 +63,15 @@ const SKILLS = [
           {
             'head':'Visualization',
             'items':[
-              {'name':'matplotlib','level':2, 'techs':[]},
-              {'name':'Seaborn','level':2, 'techs':[]}
+              {'name':'matplotlib','level':2, 'techs':['Python3']},
+              {'name':'Seaborn','level':2, 'techs':['Python3']}
             ]
           },
           {
             'head':'Machine-learning',
             'items':[
-              {'name':'Scipy','level':3, 'techs':[]},
-              {'name':'Scikit-learn','level':2, 'techs':[]}
+              {'name':'Scipy','level':3, 'techs':['Python3']},
+              {'name':'Scikit-learn','level':2, 'techs':['Python3']}
             ]
           },
           {

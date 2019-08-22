@@ -1,51 +1,58 @@
 import React from 'react';
 import { TimelineItem }  from 'vertical-timeline-component-for-react';
-import ExpansionPanel from '@material-ui/core/ExpansionPanel';
-import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
-import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import TagChips from '../TagChips'
+// import ExpansionPanel from '@material-ui/core/ExpansionPanel';
+// import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
+// import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
+// import Typography from '@material-ui/core/Typography';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+// import Button from '@material-ui/core/Button';
 
-function ExperienceDetail(detail) {
-  return(
-    <ExpansionPanel>
-        <ExpansionPanelSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel1a-content"
-          id="panel1a-header"
-        >
-          <Typography>{detail.name}</Typography>
-        </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
-          <Typography>
-            {detail.comment}
-          </Typography>
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
-  );
-}
+// function ExperienceDetail(detail) {
+//   return(
+//     <ExpansionPanel>
+//         <ExpansionPanelSummary
+//           expandIcon={<ExpandMoreIcon />}
+//           aria-controls="panel1a-content"
+//           id="panel1a-header"
+//         >
+//           <Typography>{detail.name}</Typography>
+//         </ExpansionPanelSummary>
+//         <ExpansionPanelDetails>
+//           <Typography>
+//             {detail.comment}
+//           </Typography>
+//         </ExpansionPanelDetails>
+//       </ExpansionPanel>
+//   );
+// }
 
 function ExperienceItem(exp) {
-  const name = exp.name;
-  const subname = exp.subname;
-  const date = exp.date;
-  const content = exp.content;
-  const rank = exp.rank
-  const details = exp.details.map( detail => ExperienceDetail(detail))
+  // const details = exp.details.map( detail => ExperienceDetail(detail))
+  // const links = exp.urls.map(
+  //   link =>
+  //   <Button variant="contained" href={link.url}>
+  //     github
+  //   </Button>);
+
   return (
     <TimelineItem
-      key={rank}
-      dateText={date}
+      key={exp.rank}
+      dateText={exp.date}
       style={{ color: '#e86971' }}
     >
-      <h3>{name}</h3>
-      <h4>{subname}</h4>
+      <h3>{exp.name}</h3>
+      <h4>{exp.subname}</h4>
+      { TagChips(exp.tags, exp.name) }
       <p>
-        {content}
+        {exp.content}
       </p>
-      <div>
+      {/*<div>
         {details}
-      </div>
+      </div>*/}
+      {/*<div>
+        {links}
+      </div>*/}
     </TimelineItem>
 
   );
