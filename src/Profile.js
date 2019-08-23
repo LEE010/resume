@@ -11,13 +11,12 @@ function Profile() {
       direction="column"
       justify="center"
       alignItems="center"
-      spacing={5}
       className="Profile"
     >
-      <Grid item xs={12}>
+      <Grid item container justify="center" alignItems="center">
         <ProfileImg/>
       </Grid>
-      <Grid item xs={12}>
+      <Grid direction="column" item container>
         <ProfileContent/>
       </Grid>
     </Grid>

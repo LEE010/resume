@@ -1,18 +1,13 @@
 .Profile {
-  // background-image: url('../img/hackerton.jpeg');
-  // background-size: cover;
-  // background-position: center center;
-  // background-blend-mode: lighten;
   padding-top: 2rem;
   div {
     text-align: center;
   }
-  .left {
-    // text-align: right;
-    // float:right;
-  }
-
-  .right {
-    // text-align: left;
-  }
+  .icon {
+  width: 2rem;
+  height: 2rem;
+  background: url('/images/github-brands.svg') no-repeat;
+  background-size: cover;
+  display: inline-block;
+}
 }

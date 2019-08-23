@@ -1,6 +1,5 @@
 import React from 'react';
-import DevIcon from "devicon-react-svg";
-import Icon from '@material-ui/core/Icon';
+import IconButton from '@material-ui/core/IconButton';
 
 function ProfileContent() {
   return (
@@ -8,7 +7,9 @@ function ProfileContent() {
       <h2>이동현</h2>
       <h3>Lee Dong Hyun</h3>
       <p>
-        <Icon>phone</Icon>010-2055-0328
+        <IconButton aria-label="github" component='a' href='https://github.com/LEE010'>
+          <div className='icon'></div>
+        </IconButton>
 
       </p>
     </>
