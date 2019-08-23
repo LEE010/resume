@@ -4,10 +4,15 @@
     text-align: center;
   }
   .icon {
-  width: 2rem;
-  height: 2rem;
-  background: url('/images/github-brands.svg') no-repeat;
-  background-size: cover;
-  display: inline-block;
-}
+    width: 2rem;
+    height: 2rem;
+    background: url('/images/github-brands.svg') no-repeat;
+    background-size: cover;
+    display: inline-block;
+  }
+  h2,h3 {
+    margin: 0.5rem;
+  }
+  .Card-buttons {
+  }
 }

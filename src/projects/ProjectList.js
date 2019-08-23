@@ -15,6 +15,7 @@ import {
  } from '@material-ui/core';
 import '../scss/Projects.scss';
 import ProjectModalStepper from './ProjectModalStepper';
+import TagChips from '../TagChips'
 
 class ProjectList extends Component {
   constructor(props) {
@@ -41,9 +42,16 @@ class ProjectList extends Component {
   render() {
     const name = this.props.project.name;
     const subname = this.props.project.subname;
-    const comment = this.props.project.comment.map( c => <p>{c}</p>);
-    const img_dir = this.props.project.img_dir;
+    const comment = this.props.project.comment.map( c => <p>{
+          c.split('\n').map( line => {
+            return (<span>{line}<br/></span>)
+          })
+        }</p>);
+    const thumb = this.props.project.thumb;
     const page = this.props.project.page;
+    const live = this.props.project.live;
+    const code = this.props.project.code;
+    // const tags = this.props.project.tags.map( tag => {tag} ) ;
 
     return (
       <Fragment>
@@ -56,17 +64,17 @@ class ProjectList extends Component {
               />
               <CardMedia
                 style={{ height: 0, paddingTop: '100%'}}
-                image={img_dir}
-                title="Contemplative Reptile"
+                image={ thumb }
+                title={name}
               />
             </CardActionArea>
             <CardActions>
               <div className='Card-buttons'>
-                <Button size="small" color="primary">
-                  CODE
+                <Button size="small" component='a' href={ live }>
+                  live
                 </Button>
-                <Button size="small" color="primary">
-                  PAGE
+                <Button size="small" component='a' href={ code }>
+                  code
                 </Button>
               </div>
             </CardActions>
@@ -89,10 +97,7 @@ class ProjectList extends Component {
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
-              Cancel
-            </Button>
-            <Button onClick={this.handleClose} color="primary">
-              Subscribe
+              Close
             </Button>
           </DialogActions>
 

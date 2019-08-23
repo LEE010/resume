@@ -7,8 +7,21 @@ const projects = [
   {
     'name':'Deep-Studio',
     'subname':'포스코 청년 AI·Big data Academy',
-    'img_dir': '/images/sample.png',
+    'thumb': '/images/sample.png',
+    'live': 'https://deep-studio.herokuapp.com',
+    'code': 'https://github.com/LEE010/DeepStudioCatalog',
     'page': 31,
+    'tags':[
+      'Deep Learning','Text To Speech',
+      'Shell Script','Ubuntu: 16.04',
+      'Python: 3.6.8','Tensor Flow: 1.3.0',
+      'FFmpeg-python: 1.4', 'SoX: 14.4.2',
+      'beautifulsoup: 4.6.0',
+      '...',
+    ],
+    'role':[
+      '데이터 전처리','Tacotron-2 하이퍼 파라미터 튜닝','Django 웹 구현'
+    ],
     'comment':[
       '포스코 청년 AI·Big data Academy의 AI 과정 최종 팀 프로젝트로 \
       Face Swap과 Text To Speech를 이용해 영상과 음성을 합성하여 원하는 인물로 바꾸는 프로젝트를 수행했습니다.'
@@ -44,17 +57,72 @@ const projects = [
   {
     'name':'Pommelier',
     'subname':'포스코 청년 AI·Big data Academy',
-    'img_dir': '/images/sample.png',
+    'thumb': '/images/sample.png',
+    'live': 'https://pommelier.herokuapp.com',
+    'code':'https://github.com/LEE010/bigdata-project-wine',
     'page': 13,
+    'tags':[
+      'Data Analysis','Jupyter Notebook',
+      'Ubuntu: 16.04','Python: 3.6.8',
+      'Pandas: 0.23.4', 'Scipy: 1.2.1',
+      'Sklearn: 0.20.3', 'Django: 2.1.7',
+      '...',
+    ],
+    'role':[
+      '도메인 분석', '와인 성분 데이터 이상치 처리',
+      'kaggle의 instacart 장바구니 분석',
+      '추천 알고리즘 구현', 'Django 웹 페이지 구현'
+    ],
     'comment':[
-      'Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      '포스코 청년 AI·Big data Academy의 Big data과정 최종 팀 프로젝트로 경영 위기 상황을 가정하고 새로운 사업을 제안하는 비즈니스 케이스를 주제로 빅 데이터 분석을 수행하였습니다.'
+      ,
+      '-가정된 상황 : \n 수입 주류 판매 회사에서 주 종목인 맥주의 수익이 크게 감소하였고, 따라서 새로운 시장인 와인 시장개척을 통해 위기를 극복해야 함.'
+      ,
+      '- 주어진 데이터: \n \
+      1. 와인 성분 데이터:\n 11가지 화학성분과 와인 평가 점수(0~9)\n\n \
+      2. 와인 블라인드 테스트 평가 결과: \n \
+      블라인드 테스트 참여자의 개인 신상 정보,\
+      선호 와인(5종), 치즈를 곁들였을 때 선호 와인\n\n\
+      3. 블라인드 테스트에서 사용된 와인의 성향:\n\
+      당도, 알코올 농도 등 5개(상, 중, 하)\n '
+      ,
+      '- 해결 과제:\n \
+      1. 와인 생산자가 와인의 등급을 임의로 올려 수입 원가가 15% 상승함\n\
+      2. 고객군별, 곁들이는 음식 별로 선호하는 와인이 다르므로 맞춤 추천 시스템 필요함\n '
+      ,
+      '-새로 추가한 데이터:\n \
+      1. Wine Spectator:\n \
+      와인 추천 시스템을 구현하는데 와인의 유형만 표시된 데이터만 제공되었기 때문에 실제 와인 데이터를 Beautiful Soup를 이용하여 수집하고 키워드 분석을 통해 특정 품종의 와인을 블라인드 테스트의 와인 성향으로 유추하였습니다. \n\n \
+      2. kaggle의 instacart data:\n \
+      안주 추천 시스템을 구현하는데 기존 데이터에서 사용할 수 있는 정보가 많이 없어 안주 추천 시스템을 구현하는데 어려움이 있었고 이에 따라 조사를 통해 해당 데이터를 찾아 이용하였습니다.\n \n '
+      ,
+
+      '와인 성분 데이터에서 와인 등급을 기준으로 box plot과 scatter plot을 통해 등급 별 이상치를 확인하였습니다. 표본의 개수가 많은 등급은 다른 연관된 성분들과 확인하고 이상치라고 판단되었을 때 제거하였고, 표본의 개수가 적은 등급은 연관 성분과의 관계를 비교하여 평균값, 3 분위 값 등으로 바꾸는 작업을 진행했습니다.\
+      ',
+      'instacart의 데이터를 통해 와인과의 연관 규칙을 통해 같이 많이 구매한 상품들을 찾을 수 있었습니다. 또한 와인 추천 알고리즘 구현을 위해 instacart의 와인 이름을 Wine Spectator의 결과로 라벨링 하였습니다.\ '
+      ,
+      '추천 알고리즘은 카이제곱 검정으로 영향이 있다고 판단된 나이, 성별, 직업을 통해 선호 와인 유형을 찾은 결과를 Django 웹에 DB로 저장된 라벨링 된 와인을 임의로 가져와 보여주는 방식으로 구현하였고, 안주 추천 알고리즘은 장바구니 분석을 통해 찾은 재료들로 만들 수 있는 요리를 와인 유형을 키로 값을 음식들의 배열로 딕셔너리를 선언하여 임의로 불러오는 방식으로 구현했습니다.\ '
+      ,
+      '와인 등급 평가 모델은 가장 성능이 좋았던 SVM 모델을 pickle 모듈을 이용하여 웹에서 직접 확인할 수 있게 구현하였습니다.'
     ]
   },
   {
     'name':'DSC2019',
     'subname':'주가 등락률로 살펴보는 AI 취업 전망',
-    'img_dir': '/images/sample.png',
+    'thumb': '/images/sample.png',
+    'live': '#Projects',
+    'code': 'https://github.com/LEE010/DSC2019',
     'page': 3,
+    'tags':[
+      'Data Analysis','Jupyter Notebook',
+      'Ubuntu: 18.04','Python: 3.7.1',
+      'Pandas: 0.24.2', 'Scipy: 1.2.1',
+      'Sklearn: 0.20.3', 'Seaborn: 0.9.0',
+      '...',
+    ],
+    'role':[
+      '데이터 분석'
+    ],
     'comment':[
       'Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     ]
@@ -62,8 +130,17 @@ const projects = [
   {
     'name':'minor-market',
     'subname':'멋쟁이 사자처럼',
-    'img_dir': '/images/sample.png',
+    'thumb': '/images/sample.png',
+    'live': 'https://one-two-test.herokuapp.com',
+    'code': 'https://github.com/LEE010/one-two-rails',
     'page': 10,
+    'tags':[
+      'Ruby: 2.4.1','Ruby on Rails: 5.0.7',
+      'Bootstrap: 4.1.3','jQuery: 3.x','...',
+    ],
+    'role':[
+      'RoR 웹 서비스 개발 전 과정'
+    ],
     'comment':[
       '멋쟁이 사자처럼의 아이디어톤을 시작으로 SNS 기반 쇼핑 플랫폼 minor-market을 기획하였습니다.\
       나아가 빅데이터 수집과 활용에 대한 포석으로 결제 시스템까지 결합하여 졸업 작품까지 진행하였습니다.'
