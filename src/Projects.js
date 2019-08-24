@@ -11,16 +11,18 @@ const projects = [
     'live': 'https://deep-studio.herokuapp.com',
     'code': 'https://github.com/LEE010/DeepStudioCatalog',
     'page': 31,
-    'tags':[
-      'Deep Learning','Text To Speech',
+    'intro':'얼굴 합성과, 음성 합성 Deep Learning을 활용하여 영상 속 등장 인물을 다른 인물로 교체 하여 새로운 영상물을 만드는 프로젝트',
+    'category':['Deep Learning','Text To Speech',],
+    'editor':['Atom','Jupyter Notebook'],
+    'techs':[
       'Shell Script','Ubuntu: 16.04',
       'Python: 3.6.8','Tensor Flow: 1.3.0',
       'FFmpeg-python: 1.4', 'SoX: 14.4.2',
       'beautifulsoup: 4.6.0',
       '...',
     ],
-    'role':[
-      '데이터 전처리','Tacotron-2 하이퍼 파라미터 튜닝','Django 웹 구현'
+    'roles':[
+      '영상, 음성, 문자 데이터 전처리','Tacotron-2 하이퍼 파라미터 튜닝 및 학습','Django 웹 구현'
     ],
     'comment':[
       '포스코 청년 AI·Big data Academy의 AI 과정 최종 팀 프로젝트로 \
@@ -61,14 +63,16 @@ const projects = [
     'live': 'https://pommelier.herokuapp.com',
     'code':'https://github.com/LEE010/bigdata-project-wine',
     'page': 13,
-    'tags':[
-      'Data Analysis','Jupyter Notebook',
+    'intro':'주어진 경영 위기 상황 비지니스 케이스를 데이터 분석으로 해결하는 프로젝트',
+    'category':['Data Analysis','WEB'],
+    'editor':['Atom', 'Jupyter Notebook'],
+    'techs':[
       'Ubuntu: 16.04','Python: 3.6.8',
       'Pandas: 0.23.4', 'Scipy: 1.2.1',
       'Sklearn: 0.20.3', 'Django: 2.1.7',
       '...',
     ],
-    'role':[
+    'roles':[
       '도메인 분석', '와인 성분 데이터 이상치 처리',
       'kaggle의 instacart 장바구니 분석',
       '추천 알고리즘 구현', 'Django 웹 페이지 구현'
@@ -113,18 +117,23 @@ const projects = [
     'live': '#Projects',
     'code': 'https://github.com/LEE010/DSC2019',
     'page': 3,
-    'tags':[
-      'Data Analysis','Jupyter Notebook',
+    'intro':'"데이터로 스토리 탐색하기"를 주제로 주어진 경제 지표 데이터 중 주가 등락률 데이터를 이용하여 "주가 등락를로 살펴보는 AI 취업전망" 데이터 분석을 진행하였습니다.',
+    'category':['Data Analysis',],
+    'editor':['Jupyter Notebook'],
+    'techs':[
       'Ubuntu: 18.04','Python: 3.7.1',
       'Pandas: 0.24.2', 'Scipy: 1.2.1',
       'Sklearn: 0.20.3', 'Seaborn: 0.9.0',
       '...',
     ],
-    'role':[
-      '데이터 분석'
+    'roles':[
+      '데이터 분석 전 과정',
     ],
     'comment':[
-      'Lorem ipsum dolor sit amet,consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+      '경제 지표 데이터로 어떤 스토리를 만들 수 있을까? 라는 고민 끝에 \n "주가의 상승률은 투자자들의 해당 회사에 대한 성장 혹은 수익 증가에 따른 주가 상승에 대한 기대이고, 결국 이러한 기대와 대세를 따르기 위해 기업에서도 AI 활용을 고려할 것이다." 라는 가설을 세웠고, 이를 통해 NAVER의 AI 이슈에 따른 등락률의 변화에 따른 투자자들의 반응으로 "주가 등락률로 살펴보는 AI 취업 전망"을 주제로 데이터 분석을 진행했습니다. ',
+      '처음 알파고와 이세돌 기사의 대국을 기점으로 12개월간의 주요 AI 이슈를 11개 수집하였습니다. \
+      그리고 해당 기간 동안의 주어진 주가 데이터를 확인해 본 결과 데이터가 3일에 한 번씩 수집되어 있었고, 휴장으로 인해 결측 값이 많았던 관계로, Pandas의 read_html을 이용하여 새로 데이터를 수집하였습니다. \n그리고 전일 종가를 이용하여 변화량과 변화율을 계산하여 새로운 feature를 만들어주는 작업을 진행했습니다. ',
+      '분석을 하며 T-검정을 통해 값의 변화가 유의미한지 살펴보았습니다.\n 하지만 T-검정으로 11개 중의 3개의 항목에만 유의미한 상승이 있었습니다. \n이에 따라 유의미하지 않았던 항목을 확인해본 결과 전반적으로 하락하는 추세인 것을 확인했습니다. 따라서 해당 기간에 대한 시계열 분석을 시행하였고 총 2개의 항목에 대하여 유의 수준 90% 예측보다 더 높은 상승을 한 것을 확인하였습니다. \n이를 통해 "AI 이슈들이 주가 방어에 어느 정도 기여했을 것이다." 라는 결론을 내렸고, "더 많은 긍정적 성과가 나타난다면 많은 기업에서도 AI기술 도입을 고려할 것이다."라는 결론으로 데이터 분석을 마무리 하였습니다.'
     ]
   },
   {
@@ -134,12 +143,16 @@ const projects = [
     'live': 'https://one-two-test.herokuapp.com',
     'code': 'https://github.com/LEE010/one-two-rails',
     'page': 10,
-    'tags':[
+    'intro': '"마이너 콘텐츠들의 플리마켓"을 목표로 실제 창업을 염두하고 진행한 SNS형 오픈 마켓입니다.',
+    'category':['WEB'],
+    'editor':['AWS C9','Atom'],
+    'techs':[
+      'Amazon Linux','Ubuntu: 18.04',
       'Ruby: 2.4.1','Ruby on Rails: 5.0.7',
       'Bootstrap: 4.1.3','jQuery: 3.x','...',
     ],
-    'role':[
-      'RoR 웹 서비스 개발 전 과정'
+    'roles':[
+      '웹 서비스 개발 전 과정'
     ],
     'comment':[
       '멋쟁이 사자처럼의 아이디어톤을 시작으로 SNS 기반 쇼핑 플랫폼 minor-market을 기획하였습니다.\

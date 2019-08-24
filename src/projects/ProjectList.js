@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {
   Grid,
+  Container,
   Card,
   CardActionArea,
   CardActions,
@@ -51,7 +52,11 @@ class ProjectList extends Component {
     const page = this.props.project.page;
     const live = this.props.project.live;
     const code = this.props.project.code;
-    // const tags = this.props.project.tags.map( tag => {tag} ) ;
+    const category = this.props.project.category.join(', ');
+    const intro = this.props.project.intro;
+    const editors = this.props.project.editor.join(', ');
+    const techs = this.props.project.techs.join(', ') ;
+    const roles = this.props.project.roles.join(', ');
 
     return (
       <Fragment>
@@ -88,12 +93,34 @@ class ProjectList extends Component {
           fullWidth={true}
           scroll='paper'
         >
-          <DialogTitle id="scroll-dialog-title">{name}</DialogTitle>
+          <DialogTitle id="dialog-title">{name}</DialogTitle>
           <DialogContent>
             <ProjectModalStepper name={name} page={page} />
-            <DialogContentText>
-              {comment}
-            </DialogContentText>
+              <Container maxWidth="md">
+                <div className='dialog-content-head'>
+                  <h4>Category</h4>
+                  {category}
+                </div>
+                <div className='dialog-content-head'>
+                  <h4>Intro</h4>
+                  {intro}
+                </div>
+                <div className='dialog-content-head'>
+                  <h4>Envs</h4>
+                  <h5>Editor</h5>
+                  {editors}
+                  <h5>Tech Stack</h5>
+                  {techs}
+                </div>
+                <div className='dialog-role'>
+                  <h4>Role</h4>
+                  {roles}
+                </div>
+                <div className='dialog-detail'>
+                  <h4>Detail</h4>
+                  {comment}
+                </div>
+              </Container>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">

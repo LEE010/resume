@@ -8,11 +8,9 @@ import Link from '@material-ui/core/Link';
 function MadeWithLove() {
   return (
     <Typography variant="body2" color="textSecondary">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
+      <Link color="inherit" href="https://github.com/LEE010/resume">
+        Copyright © LEE DONG HYUN
       </Link>
-      {' team.'}
     </Typography>
   );
 }
@@ -31,7 +29,6 @@ export default function Footer() {
   return (
     <footer className={classes.footer}>
       <Container maxWidth="sm">
-        <Typography variant="body1">My sticky footer can be found here.</Typography>
         <MadeWithLove />
       </Container>
     </footer>
