@@ -8,7 +8,7 @@ function ProfileContent() {
       <h3>Lee Dong Hyun</h3>
       <p>
         <IconButton aria-label="github" component='a' href='https://github.com/LEE010'>
-          <div className='icon'></div>
+          <div className='icon' style={{backgroundImage: 'url("images/github-brands.svg")'}} ></div>
         </IconButton>
 
       </p>

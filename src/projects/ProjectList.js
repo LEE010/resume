@@ -46,7 +46,7 @@ class ProjectList extends Component {
             return (<span>{line}<br/></span>)
           })
         }</p>);
-    const thumb = '/images/thumb/' + name +'.jpg';
+    const thumb = 'images/thumb/' + name +'.jpg';
     const page = this.props.project.page;
     const live = this.props.project.live;
     const code = this.props.project.code;

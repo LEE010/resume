@@ -7,7 +7,6 @@ const projects = [
   {
     'name':'Deep-Studio',
     'subname':'포스코 청년 AI·Big data Academy',
-    'thumb': '/images/sample.png',
     'live': 'https://deep-studio.herokuapp.com',
     'code': 'https://github.com/LEE010/DeepStudioCatalog',
     'page': 31,
@@ -59,7 +58,6 @@ const projects = [
   {
     'name':'Pommelier',
     'subname':'포스코 청년 AI·Big data Academy',
-    'thumb': '/images/sample.png',
     'live': 'https://pommelier.herokuapp.com',
     'code':'https://github.com/LEE010/bigdata-project-wine',
     'page': 13,
@@ -138,7 +136,6 @@ const projects = [
   {
     'name':'minor-market',
     'subname':'멋쟁이 사자처럼',
-    'thumb': '/images/sample.png',
     'live': 'https://one-two-test.herokuapp.com',
     'code': 'https://github.com/LEE010/one-two-rails',
     'page': 10,
