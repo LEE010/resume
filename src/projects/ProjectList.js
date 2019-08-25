@@ -11,12 +11,10 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
  } from '@material-ui/core';
 import '../scss/Projects.scss';
 import ProjectModalStepper from './ProjectModalStepper';
-import TagChips from '../TagChips'
 
 class ProjectList extends Component {
   constructor(props) {
@@ -48,7 +46,7 @@ class ProjectList extends Component {
             return (<span>{line}<br/></span>)
           })
         }</p>);
-    const thumb = this.props.project.thumb;
+    const thumb = '/images/thumb/' + name +'.jpg';
     const page = this.props.project.page;
     const live = this.props.project.live;
     const code = this.props.project.code;

@@ -113,7 +113,6 @@ const projects = [
   {
     'name':'DSC2019',
     'subname':'주가 등락률로 살펴보는 AI 취업 전망',
-    'thumb': '/images/sample.png',
     'live': '#Projects',
     'code': 'https://github.com/LEE010/DSC2019',
     'page': 3,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Paper, LinearProgress, Chip } from '@material-ui/core';
+import { Grid, Paper, LinearProgress } from '@material-ui/core';
 import { lighten, withStyles, makeStyles } from '@material-ui/core/styles';
 import '../scss/Skills.scss';
 
