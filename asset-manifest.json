@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/github.io/static/css/main.5bfe088f.chunk.css",
-    "main.js": "/github.io/static/js/main.fef4e5cc.chunk.js",
-    "main.js.map": "/github.io/static/js/main.fef4e5cc.chunk.js.map",
-    "runtime~main.js": "/github.io/static/js/runtime~main.50f22872.js",
-    "runtime~main.js.map": "/github.io/static/js/runtime~main.50f22872.js.map",
-    "static/css/2.400ebc83.chunk.css": "/github.io/static/css/2.400ebc83.chunk.css",
-    "static/js/2.cd27892d.chunk.js": "/github.io/static/js/2.cd27892d.chunk.js",
-    "static/js/2.cd27892d.chunk.js.map": "/github.io/static/js/2.cd27892d.chunk.js.map",
-    "index.html": "/github.io/index.html",
-    "precache-manifest.33cd633ba573cd8748d9ae6c9b4ff0f2.js": "/github.io/precache-manifest.33cd633ba573cd8748d9ae6c9b4ff0f2.js",
-    "service-worker.js": "/github.io/service-worker.js",
-    "static/css/2.400ebc83.chunk.css.map": "/github.io/static/css/2.400ebc83.chunk.css.map",
-    "static/css/main.5bfe088f.chunk.css.map": "/github.io/static/css/main.5bfe088f.chunk.css.map",
-    "static/media/profile.jpg": "/github.io/static/media/profile.f211913f.jpg"
+    "main.css": "/github.io/resume/static/css/main.5bfe088f.chunk.css",
+    "main.js": "/github.io/resume/static/js/main.69ef7781.chunk.js",
+    "main.js.map": "/github.io/resume/static/js/main.69ef7781.chunk.js.map",
+    "runtime~main.js": "/github.io/resume/static/js/runtime~main.53bc2132.js",
+    "runtime~main.js.map": "/github.io/resume/static/js/runtime~main.53bc2132.js.map",
+    "static/css/2.400ebc83.chunk.css": "/github.io/resume/static/css/2.400ebc83.chunk.css",
+    "static/js/2.cd27892d.chunk.js": "/github.io/resume/static/js/2.cd27892d.chunk.js",
+    "static/js/2.cd27892d.chunk.js.map": "/github.io/resume/static/js/2.cd27892d.chunk.js.map",
+    "index.html": "/github.io/resume/index.html",
+    "precache-manifest.84f406cac82040b16088fbff7b2fc5ac.js": "/github.io/resume/precache-manifest.84f406cac82040b16088fbff7b2fc5ac.js",
+    "service-worker.js": "/github.io/resume/service-worker.js",
+    "static/css/2.400ebc83.chunk.css.map": "/github.io/resume/static/css/2.400ebc83.chunk.css.map",
+    "static/css/main.5bfe088f.chunk.css.map": "/github.io/resume/static/css/main.5bfe088f.chunk.css.map",
+    "static/media/profile.jpg": "/github.io/resume/static/media/profile.f211913f.jpg"
   }
 }
