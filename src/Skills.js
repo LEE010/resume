@@ -11,14 +11,14 @@ const SKILLS = [
           {
             'head':'',
             'items':[
-              { 'name':'C', 'level':3, 'techs':[] },
-              { 'name':'C++', 'level':2, 'techs':[] },
-              { 'name':'Python3', 'level':4, 'techs':[] },
-              { 'name':'Java', 'level':2, 'techs':[] },
-              { 'name':'Ruby', 'level':3, 'techs':[] },
-              { 'name':'HTML', 'level':3, 'techs':[] },
-              { 'name':'CSS', 'level':2, 'techs':[] },
-              { 'name':'JavaScript', 'level':3, 'techs':[] },
+              { 'name':'C', 'level':5, 'techs':[] },
+              { 'name':'C++', 'level':3, 'techs':[] },
+              { 'name':'Python3', 'level':6.5, 'techs':[] },
+              { 'name':'Java', 'level':4, 'techs':[] },
+              { 'name':'Ruby', 'level':5, 'techs':[] },
+              { 'name':'HTML', 'level':6, 'techs':[] },
+              { 'name':'CSS', 'level':5, 'techs':[] },
+              { 'name':'JavaScript', 'level':5, 'techs':[] },
             ]
           }
         ]
@@ -34,16 +34,16 @@ const SKILLS = [
           {
             'head':'Front-end',
             'items':[
-              { 'name':'Bootstrap', 'level':3, 'techs':['HTML','CSS','JS'] },
-              { 'name':'jQuery', 'level':2, 'techs':['JS'] },
-              { 'name':'Sass', 'level':2, 'techs':['CSS'] }
+              { 'name':'Bootstrap', 'level':5, 'techs':['HTML','CSS','JS'] },
+              { 'name':'jQuery', 'level':3, 'techs':['JS'] },
+              { 'name':'React', 'level':3, 'techs':['JS'] }
             ]
           },
           {
             'head':'Back-end',
             'items':[
-              { 'name':'Ruby on Rails', 'level':3, 'techs':['Ruby'] },
-              { 'name':'Django','level':3, 'techs':['Python3'] },
+              { 'name':'Ruby on Rails', 'level':5, 'techs':['Ruby'] },
+              { 'name':'Django','level':5, 'techs':['Python3'] },
               { 'name':'Spring','level':1, 'techs':['Java'] }
             ]
           }
@@ -52,20 +52,20 @@ const SKILLS = [
       {
         'category':'AI·Bigdata',
         'heads':[
-          {
-            'head':'Preprocessing',
-            'items':[
-              {'name':'Numpy','level':2, 'techs':[]},
-              {'name':'Pandas','level':3, 'techs':[]}
-            ]
-          },
-          {
-            'head':'Visualization',
-            'items':[
-              {'name':'matplotlib','level':2, 'techs':['Python3']},
-              {'name':'Seaborn','level':2, 'techs':['Python3']}
-            ]
-          },
+          // {
+          //   'head':'Preprocessing',
+          //   'items':[
+          //     {'name':'Numpy','level':2, 'techs':[]},
+          //     {'name':'Pandas','level':3, 'techs':[]}
+          //   ]
+          // },
+          // {
+          //   'head':'Visualization',
+          //   'items':[
+          //     {'name':'matplotlib','level':2, 'techs':['Python3']},
+          //     {'name':'Seaborn','level':2, 'techs':['Python3']}
+          //   ]
+          // },
           {
             'head':'Machine-learning',
             'items':[
@@ -76,7 +76,7 @@ const SKILLS = [
           {
             'head':'Deep-learning',
             'items':[
-              {'name':'TensorFlow','level':1, 'techs':[]}
+              {'name':'TensorFlow 1.-','level':1, 'techs':[]}
             ]
           },
         ]
@@ -92,12 +92,12 @@ const SKILLS = [
           {
             'head':'',
             'items':[
-              {'name':'Ubuntu','level':3, 'techs':[]},
-              {'name':'Anaconda','level':3, 'techs':[]},
+              {'name':'Ubuntu','level':5, 'techs':[]},
+              // {'name':'Anaconda','level':3, 'techs':[]},
               {'name':'Shell Script','level':1, 'techs':[]},
-              {'name':'FFmpeg','level':1, 'techs':[]},
-              {'name':'SoX','level':1, 'techs':[]},
-              {'name':'ImageMagick','level':1, 'techs':[]},
+              // {'name':'FFmpeg','level':1, 'techs':[]},
+              // {'name':'SoX','level':1, 'techs':[]},
+              // {'name':'ImageMagick','level':1, 'techs':[]},
             ]
           }
         ]

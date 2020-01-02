@@ -36,7 +36,7 @@ function SkillsItem(item) {
         <div className={classes.progressDiv}>
           <BorderLinearProgress
             variant="determinate"
-            value={item.level*20}
+            value={item.level*10}
             />
         </div>
 
