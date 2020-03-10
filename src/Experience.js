@@ -10,7 +10,10 @@ const EXPS = [
     'subname':'머신러닝 심화반',
     'date':'2019/06 - 2019/07',
     'content':'구글 클라우드 플랫폼을 활용하여, 데이터 수집, 저장, 전처리, 모델구현, 학습, 배포, 갱신 등 머신러닝 활용 서비스의 전반적인 흐름에 대해 학습하였습니다.',
-    'tags':[ 'GCP', 'TF','BigQuery','DataFlow','DataLab', ],
+    'tags':[
+      'GCP', 'Machine Learning','TF',
+      // 'BigQuery','DataFlow','DataLab',
+    ],
     'urls':[]
   },
   {
@@ -20,10 +23,11 @@ const EXPS = [
     'date':'2019/04 - 2019/05',
     'content':'2019년 4월부터 5월까지 1개월간 온라인 강의 수강후, "데이터에서 스토리 탐색하기"를 주제로 주어진 주식 데이터를 이용하여 "주가등락률로 살펴보는 AI 취업 전망" 을 결과물로 제출하였습니다.',
     'tags':[
-      'Data Analysis','Bigdata','ML','Statistics',
-      'Scipy','Sklearn','Numpy','Pandas',
-      'Matplotlib','Seaborn','JupyterNotebook',
-      'Linux','Anaconda',
+      'Data Analysis',
+      // 'Bigdata','ML','Statistics',
+      // 'Scipy','Sklearn','Numpy','Pandas',
+      // 'Matplotlib','Seaborn','JupyterNotebook',
+      // 'Linux','Anaconda',
     ],
     'urls':[
       {
@@ -39,12 +43,13 @@ const EXPS = [
     'date':'2019/01 - 2019/04',
     'content':'2019년 1월부터 3개월간 포항에서 숙식하며 Python3 기반으로 통계, 빅데이터, 머신러닝, 딥러닝을 학습였습니다. 빅데이터와 AI에 대해 각각 팀 프로젝트를 수행하였고, AI프로젝트에서 "우수상"을 수상하였습니다.',
     'tags':[
-      'AI', 'Bigdata', 'Statistics','Algorithm',
-      'ML','Python3','Numpy','Pandas',
-      'Matplotlib','Seaborn','JupyterNotebook',
-      'Linux','Anaconda','Scipy','Sklearn',
-      'Deep Learning','TF','NLP','DNN','FNN','CNN',
-      'ResNet','RNN','LSTM','GAN',
+      'Data Analysis','Machine Learning','Deep Learning',
+      // 'AI', 'Bigdata', 'Statistics','Algorithm',
+      // 'ML','Python3','Numpy','Pandas',
+      // 'Matplotlib','Seaborn','JupyterNotebook',
+      // 'Linux','Anaconda','Scipy','Sklearn',
+      // 'Deep Learning','TF','NLP','DNN','FNN','CNN',
+      // 'ResNet','RNN','LSTM','GAN',
     ],
     'details':[
       {
@@ -87,9 +92,10 @@ const EXPS = [
     'date':'2018/07 - 2018/08',
     'content':'2018년 7월부터 8월까지 1개월간 온라인 강의 수강 후, UCI의 "Wine Quality Data Set" 을 이용하여 "성분분석으로 보는 와인 품질과 품종의 관계"를 주제로 데이터분석을 했습니다. ',
     'tags':[
-      'Bigdata','Data Analysis', 'ML','Statistics',
-      'Python3','Numpy','Pandas','Sklearn',
-      'Linux','Anaconda','Jupyter'
+      'Data Analysis',
+      // 'Bigdata', 'ML','Statistics',
+      // 'Python3','Numpy','Pandas','Sklearn',
+      // 'Linux','Anaconda','Jupyter'
     ],
     'details':[
       {
@@ -114,9 +120,10 @@ const EXPS = [
     실제 창업을 목표로 "마이너 콘텐츠 플리마켓, minor-market"을 기획, 설계, 구현하였고,\
     멋쟁이 사자처럼 6기 해커톤에서 알까기 알고리즘을 만들어 대결하는 "알까고"에 참여하여 준우승 하였습니다.',
     'tags':[
-      'Web', 'Ruby', 'Rails','Html',
-      'CSS','JS','jQuery','AWS','EC2',
-      'C9','S3','RestAPI','Python3','Django',
+      'Ruby on Rails','Django','Bootstrap'
+      // 'Web', 'Html',
+      // 'CSS','JS','jQuery','AWS','EC2',
+      // 'C9','S3','RestAPI','Python3',
     ],
     'details':[
       {
@@ -137,16 +144,16 @@ const EXPS = [
       }
     ]
   },
-  {
-    'rank':5,
-    'name':'건설현장 일용직 근무',
-    'subname':'배관공',
-    'date':'2016/06 - 2017/08',
-    'tags':[ '노가다','배관','용접','준기공' ],
-    'content':'약 1년 6개월간 삼정보일러와 삼성 고덕 반도체 건설현장에서 배관공으로 일용직 근무를 하였습니다.',
-    'details':[],
-    'urls':[]
-  },
+  // {
+  //   'rank':5,
+  //   'name':'건설현장 일용직 근무',
+  //   'subname':'배관공',
+  //   'date':'2016/06 - 2017/08',
+  //   'tags':[ '노가다','배관','용접','준기공' ],
+  //   'content':'약 1년 6개월간 삼정보일러와 삼성 고덕 반도체 건설현장에서 배관공으로 일용직 근무를 하였습니다.',
+  //   'details':[],
+  //   'urls':[]
+  // },
   {
     'rank':6,
     'name':'평택대학교',
@@ -155,7 +162,7 @@ const EXPS = [
     'tags':[
       'Computational Thinking','Computer Science', 'Algorithm',
       'OS', 'DB', 'Security','SW Engineering',
-      'C','C++','Java','linux',
+      // 'C','C++','Java','linux',
     ],
     'content':'평택대학교에서 정보통신학을 전공하며 관련 과목에서 좋은 성적으로 졸업하였습니다.',
     'details':[
@@ -178,7 +185,7 @@ function Experience() {
   const timeline_items = EXPS.map(exp => ExperienceItem(exp));
     return (
       <section id='Experience'>
-        <h1>Experience</h1>
+        <h2>Experience</h2>
           <Paper>
             <Timeline lineColor={'#ddd'}>
               { timeline_items }

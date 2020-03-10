@@ -42,7 +42,7 @@ function ExperienceItem(exp) {
       style={{ color: '#e86971' }}
     >
       <h3>{exp.name}</h3>
-      <h4>{exp.subname}</h4>
+      <strong>{exp.subname}</strong>
       { TagChips(exp.tags, exp.name) }
       <p>
         {exp.content}

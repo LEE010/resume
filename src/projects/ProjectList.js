@@ -43,7 +43,7 @@ class ProjectList extends Component {
     const subname = this.props.project.subname;
     const comment = this.props.project.comment.map( c => <p>{
           c.split('\n').map( line => {
-            return (<span>{line}<br/></span>)
+            return (<>{line}<br/></>)
           })
         }</p>);
     const thumb = 'images/thumb/' + name +'.jpg';

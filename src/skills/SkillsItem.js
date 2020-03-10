@@ -30,9 +30,9 @@ function SkillsItem(item) {
       key={ '-'+ name}
       >
       <Paper className='item_div'>
-        <h5 className='head'>
+        <strong className='head'>
           {name}
-        </h5>
+        </strong>
         <div className={classes.progressDiv}>
           <BorderLinearProgress
             variant="determinate"

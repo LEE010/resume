@@ -1,26 +1,19 @@
 #Header {
-  
+
   background-position: center;
   background-size: cover;
   max-height: 700px;
   min-height: 300px;
   height: 100%;
   filter: opacity(80%);
-  justify-content: center;
   margin-top: 5rem;
   padding-top: 11rem;
 
   .resume-title {
-    // position: relative;
-    justify-content: center;
     text-align: center;
-    // width: 100%;
-    // min-height: 90%;
-    padding: 1rem 0 1rem 0;
+    padding: 15px 0;
     color: white;
     background-color: rgba(0,0,0,0.5);
-    h1 {
-      margin: 0;
-    }
+    word-break: keep-all;
   }
 }

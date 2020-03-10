@@ -183,7 +183,7 @@ function Projects() {
   );
   return (
     <section id='Projects' className='Projects'>
-      <h1>Projects</h1>
+      <h2>Projects</h2>
         <Grid
           container
           direction="row"

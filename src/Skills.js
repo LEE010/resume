@@ -121,7 +121,7 @@ function Skills() {
 
   return (
     <section className='Skills' id='Skills'>
-      <h1>Skills</h1>
+      <h2>Skills</h2>
       {skills}
     </section>
   );
