@@ -6,6 +6,41 @@ import { Timeline }  from 'vertical-timeline-component-for-react';
 const EXPS = [
   {
     'rank':0,
+    'name':'부스트캠프 - 챌린지',
+    'subname':'웹 풀스택',
+    'date':'2020/07/27 - 2020/08/21',
+    'content':'커넥트 제단에서 진행한 부스트캠프 챌린지 과정에 참여하여 활동하였습니다.',
+    'tags':[
+      'JS','ES6','CS 기본기'
+      // 'BigQuery','DataFlow','DataLab',
+    ],
+    'urls':[]
+  },
+  {
+    'rank':0,
+    'name':'부스트 코딩뉴비 챌린지',
+    'subname':'Leader newbie',
+    'date':'2020/07/10 - 2020/08/28',
+    'content':'Edwith의 [부스트코스] 모두를 위한 컴퓨터 과학(CS50 2019)을 기반으로 하는 온라인 스터디 프로그램에 리더로 참여하여 활동하였습니다.',
+    'tags':[
+      'C','CS 기본기',
+    ],
+    'urls':[]
+  },
+  {
+    'rank':0,
+    'name':'N Tech Service',
+    'subname':'UI개발 인턴',
+    'date':'2020/01/06 - 2020/02/29',
+    'content':'N Tech Service의 UI개발 인턴에 참여하여 HTML, CSS 등 마크업 관련 교육을 받았습니다.',
+    'tags':[
+      'HTML','CSS'
+      // 'BigQuery','DataFlow','DataLab',
+    ],
+    'urls':[]
+  },
+  {
+    'rank':0,
     'name':'Google Study Jam',
     'subname':'머신러닝 심화반',
     'date':'2019/06 - 2019/07',
