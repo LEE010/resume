@@ -388,15 +388,6 @@ button {
 .contact_thumb {
     display: inline-block;
     border-radius: 100px;
-    vertical-align: top;
-    margin-top: 7px;
-}
-
-.contact_infos {
-    display: inline-block;
-    vertical-align: top;
-    /* height: 200px; */
-    margin-left: 20px;
 }
 
 .contact_name {
@@ -409,7 +400,6 @@ button {
 }
 
 .contact_info {
-    text-align: left;
     margin-top: 20px;
 }
 
@@ -465,6 +455,7 @@ button {
 }
 
 .result_modal {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
