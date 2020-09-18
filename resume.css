@@ -5,6 +5,10 @@ strong, ul, ol, li, p, button {
     padding: 0;
 }
 
+body {
+    color: #1a1c20;
+}
+
 h1, h2, h3, strong {
     font-weight: normal;
 }
@@ -12,6 +16,10 @@ h1, h2, h3, strong {
 a {
     text-decoration: none;
     color: #000;
+}
+
+em {
+    font-style: normal;
 }
 
 ul, ol {
@@ -43,6 +51,8 @@ button {
     left: 0;
     right: 0;
     z-index: 100;
+    background-color: #00334e;
+    min-width: 1024px;
 }
 
 .page_title {
@@ -54,20 +64,49 @@ button {
     color: #f6f5f5;
     font-weight: bold;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 25px;
     padding: 20px 40px;
 }
+
+.page_logo:hover {
+    color: #fff;
+}
+
+.logo_txt {
+    position: relative;
+    display: inline-block;
+    background-color: #00334e;
+    padding: 0 3px;
+}
+
+.page_logo:hover .logo_txt:before, 
+.page_logo:hover .logo_txt:after {
+    background-color: #ee6f57;
+}
+
+.logo_txt:before, .logo_txt:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    z-index: -1;
+}
+
+.logo_txt:before {
+    top: -3px;
+    left: -3px;
+}
+
+.logo_txt:after {
+    right: -3px;
+    bottom: -3px;
+}
+
 
 .page_nav {
     position: absolute;
     top: 0;
     right: 0;
-}
-
-.nav_items {
-    /* background-color: #00334e; */
-    /* border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px; */
 }
 
 .nav_items:after {
@@ -82,11 +121,28 @@ button {
 
 .nav_link {
     display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
     padding: 20px 40px;
     color: #f2f4f7;
     text-align: center;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 25px;
+}
+
+.nav_link:after {
+    display: block;
+    content: '';
+    height: 2px;
+}
+
+.nav_link:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav_link:hover:after {
+    background-color: #ee6f57;
 }
 
 .resume_intro {
@@ -151,10 +207,11 @@ button {
 .section_title {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     color: #1a1c20;
     font-weight: bold;
-    font-size: 30px;
-    line-height: 30px;
+    font-size: 38px;
+    line-height: 38px;
     z-index: 1;
 }
 
@@ -162,41 +219,37 @@ button {
     position: absolute;
     content: '';
     background-color: #ee6f57;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     z-index: -1;
 }
 
 .section_title:before {
-    top: -3px;
-    left: -3px;
+    top: -5px;
+    left: -5px;
 }
 
 .section_title:after {
-    right: -3px;
-    bottom: -3px;
+    right: -5px;
+    bottom: -5px;
 }
 
 .resume_about {
-    padding: 30px 0;
+    padding: 80px 0;
     background-color: #f2f4f7;
     text-align: center;
 }
 
 .about_wrap {
     width: 1000px;
-    margin: auto;
+    margin: 70px auto 0;
     background-color: inherit;
 }
 
 .about_title {
     background-color: #f2f4f7;
-    line-height: 30px;
     display: inline-block;
-}
-
-.about_items {
-    margin-top: 30px;
+    padding: 0 5px;
 }
 
 .about_items:after {
@@ -209,7 +262,7 @@ button {
     float: left;
     box-sizing: border-box;
     width: 33.33333%;
-    padding: 0 20px;
+    padding: 0 30px;
 }
 
 .about_img {
@@ -234,23 +287,26 @@ button {
 }
 
 .resume_exp {
-    padding: 30px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 .exp_wrap {
     width: 1000px;
-    margin: auto;
+    margin: 70px auto 0;
 }
 
 .exp_title {
     background-color: #fff;
-    line-height: 30px;
     display: inline-block;
+    padding: 0 5px;
 }
 
-.exps {
-    margin-top: 30px;
+.notice {
+    display: block;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #6e6d6d;
 }
 
 .exp:after {
@@ -304,15 +360,8 @@ button {
     font-weight: bold;
 }
 
-/* .exp_head:after {
-    display: inline-block;
-    content: '';
-    background-color: #ee6f57;
-    width: 10px;
-    height: 10px;
-} */
-
 .exp_subhead {
+    color: #6e6d6d;
     margin-top: 10px;
     font-size: 20px;
 }
@@ -333,6 +382,7 @@ button {
     background-color: #fff;
     line-height: 24px;
     display: inline-block;
+    padding: 0 3px;
 }
 
 .results_title:before, .results_title:after {
@@ -359,30 +409,39 @@ button {
 }
 
 .result_icon {
+    position: relative;
     width: 100px;
     height: 100px;
     background-color: #6e6d6d;
     border-radius: 20px;
+    overflow: hidden;
+}
+
+.result_icon:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .resume_contact {
     background-color: #d6e0f0;
-    padding: 30px 0;
+    padding: 80px 0;
     text-align: center;
 }
 
 .contact_wrap {
     width: 1000px;
-    margin: auto;
+    margin: 70px auto 0;
 }
 
 .contact_title {
     display: inline-block;
     background-color: #d6e0f0;
-}
-
-.contact_wrap {
-    margin-top: 20px;
+    padding: 0 5px;
 }
 
 .contact_thumb {
@@ -429,6 +488,7 @@ button {
 }
 
 .social_item {
+    position: relative;
     display: inline-block;
     background-color: #fff;
     border-radius: 25px;
@@ -442,6 +502,16 @@ button {
     height: 50px;
 }
 
+.social_link:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
 .git_icon {
     background-image: url(./github-icon.png);
     background-repeat: no-repeat;
@@ -450,7 +520,6 @@ button {
 
 .resume_footer {
     padding: 30px 0;
-    min-width: 1024px;
     text-align: center;
 }
 
@@ -504,25 +573,6 @@ button {
     font-weight: bold;
 }
 
-.modal_title:before, .modal_title:after {
-    position: absolute;
-    content: '';
-    background-color: #ee6f57;
-    width: 10px;
-    height: 10px;
-    z-index: -1;
-}
-
-.modal_title:before {
-    top: -3px;
-    left: -3px;
-}
-
-.modal_title:after {
-    right: -3px;
-    bottom: -3px;
-}
-
 .modal_close_btn {
     position: absolute;
     top: 0;
@@ -541,6 +591,7 @@ button {
     display: inline-block;
     font-size: 18px;
     line-height: 18px;
+    font-weight: bold;
 }
 
 .modal_content_head:after {
@@ -590,13 +641,14 @@ button {
     vertical-align: top;
     box-sizing: border-box;
     width: 80px;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     font: 18px;
     background-color: #ee6f57;
     text-align: center;
     border-radius: 5px;
     color: #fff;
+    font-weight: bold;
 }
 
 .modal_btn + .modal_btn {
