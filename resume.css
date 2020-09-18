@@ -5,6 +5,10 @@ strong, ul, ol, li, p, button {
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: #1a1c20;
 }
@@ -43,6 +47,7 @@ button {
 
 .wrap {
     min-width: 1024px;
+    scroll-behavior: smooth;
 }
 
 .resume_header {
