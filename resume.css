@@ -49,6 +49,10 @@ button {
     cursor: pointer;
 }
 
+p {
+    word-break: keep-all;
+}
+
 .blind {
     position: absolute;
     width: 1px;
@@ -344,7 +348,6 @@ button {
     margin-top: 15px;
     font-size: 18px;
     line-height: 25px;
-    /* text-align: left; */
 }
 
 .about_ending {
