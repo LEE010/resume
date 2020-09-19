@@ -5,12 +5,25 @@ strong, ul, ol, li, p, button {
     padding: 0;
 }
 
+@font-face {
+    font-family: NotoSans;
+    src: url(./fonts/NotoSansKR-Medium.otf) format('otf');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: NotoSans;
+    src: url(./fonts/NotoSansKR-Bold.otf) format('otf');
+    font-weight: bold;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     color: #1a1c20;
+    font-family: NotoSans, Apple SD Gothic Neo, sans-serif; 
 }
 
 h1, h2, h3, strong {
@@ -19,7 +32,7 @@ h1, h2, h3, strong {
 
 a {
     text-decoration: none;
-    color: #000;
+    color: #1a1c20;
 }
 
 em {
@@ -213,7 +226,6 @@ button {
     position: relative;
     display: inline-block;
     vertical-align: top;
-    color: #1a1c20;
     font-weight: bold;
     font-size: 38px;
     line-height: 38px;
