@@ -259,7 +259,7 @@ button {
 
 .about_wrap {
     width: 1000px;
-    margin: 70px auto 0;
+    margin: 50px auto 0;
     background-color: inherit;
 }
 
@@ -267,6 +267,29 @@ button {
     background-color: #f2f4f7;
     display: inline-block;
     padding: 0 5px;
+}
+
+.about_opening {
+    font-size: 30px;
+    font-style: italic;
+}
+
+.about_point {
+    display: inline-block;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.about_point:after {
+    display: block;
+    content: '';
+    height: 10px;
+    background-color: #ee6f57;
+    margin-top: -5px;
+}
+
+.about_items {
+    margin-top: 70px;
 }
 
 .about_items:after {
@@ -282,25 +305,52 @@ button {
     padding: 0 30px;
 }
 
-.about_img {
+.about_thumb {
+    margin: auto;
+    width: 150px;
+    background-color: #fff;
     border-radius: 75px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+}
+
+.about_img {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 25px 0;
 }
 
 .about_content {
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .about_head {
+    display: inline-block;
     font-size: 24px;
-    line-height: 36px;
+    line-height: 28px;
     font-weight: bold;
 }
 
+.about_head:after {
+    display: block;
+    content: '';
+    height: 3px;
+    background-color: #ee6f57;
+}
+
 .about_body {
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 18px;
     line-height: 25px;
-    text-align: left;
+    /* text-align: left; */
+}
+
+.about_ending {
+    margin-top: 70px;
+    font-size: 30px;
+    font-style: italic;
 }
 
 .resume_exp {
@@ -452,7 +502,7 @@ button {
 
 .contact_wrap {
     width: 1000px;
-    margin: 70px auto 0;
+    margin: 50px auto 0;
 }
 
 .contact_title {
@@ -513,6 +563,10 @@ button {
     font-size: 0;
 }
 
+.social_item + .social_item {
+    margin-left: 10px;
+}
+
 .social_link {
     display: inline-block;
     width: 50px;
@@ -529,8 +583,30 @@ button {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.git_icon {
-    background-image: url(./github-icon.png);
+.icon_email {
+    background-image: url(./images/icons/icon-mail.png);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: center;
+}
+
+.social_link.icon_email:hover {
+    background-image: url(./images/icons/icon-mail-on.png);
+}
+
+.icon_phone {
+    background-image: url(./images/icons/icon-phone.png);
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: center;
+}
+
+.social_link.icon_phone:hover {
+    background-image: url(./images/icons/icon-phone-on.png);
+}
+
+.icon_github {
+    background-image: url(./images/icons/icon-github.png);
     background-repeat: no-repeat;
     background-size: 50px 50px;
 }
@@ -596,8 +672,18 @@ button {
     right: 0;
     width: 25px;
     height: 25px;
-    background-image: url(./icon-close.png);
+    background-image: url(./images/icons/icon-close.png);
     background-size: 25px 25px;
+}
+
+.modal_close_btn:hover:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .modal_content {
@@ -666,6 +752,10 @@ button {
     border-radius: 5px;
     color: #fff;
     font-weight: bold;
+}
+
+.modal_btn:hover {
+    background-color: #145374;
 }
 
 .modal_btn + .modal_btn {
