@@ -102,7 +102,9 @@ p {
 }
 
 .page_logo:hover .logo_txt:before, 
-.page_logo:hover .logo_txt:after {
+.page_logo:hover .logo_txt:after,
+.page_logo:focus .logo_txt:before,
+.page_logo:focus .logo_txt:after {
     background-color: #ee6f57;
 }
 
@@ -123,7 +125,6 @@ p {
     right: -3px;
     bottom: -3px;
 }
-
 
 .page_nav {
     position: absolute;
@@ -163,7 +164,8 @@ p {
     font-weight: bold;
 }
 
-.nav_link:hover:after {
+.nav_link:hover:after,
+.nav_link:focus:after {
     background-color: #ee6f57;
 }
 
@@ -487,7 +489,8 @@ p {
     overflow: hidden;
 }
 
-.result_icon:hover:after {
+.result_icon:hover:after,
+.result_icon:focus:after {
     content: '';
     position: absolute;
     top: 0;
@@ -576,7 +579,8 @@ p {
     height: 50px;
 }
 
-.social_link:hover:after {
+.social_link:hover:after,
+.social_link:focus:after {
     content: '';
     position: absolute;
     top: 0;
@@ -593,7 +597,8 @@ p {
     background-position: center;
 }
 
-.social_link.icon_email:hover {
+.social_link.icon_email:hover,
+.social_link.icon_email:focus {
     background-image: url(./images/icons/icon-mail-on.png);
 }
 
@@ -604,7 +609,8 @@ p {
     background-position: center;
 }
 
-.social_link.icon_phone:hover {
+.social_link.icon_phone:hover,
+.social_link.icon_phone:focus {
     background-image: url(./images/icons/icon-phone-on.png);
 }
 
@@ -648,12 +654,8 @@ p {
     min-height: 250px;
     background-color: #f2f4f7;
     border-radius: 25px;
-    padding: 25px;
+    padding: 25px 25px 65px;
 }
-
-/* body {
-    overflow: hidden;
-} */
 
 .modal_header {
     position: relative;
@@ -679,7 +681,8 @@ p {
     background-size: 25px 25px;
 }
 
-.modal_close_btn:hover:after {
+.modal_close_btn:hover:after,
+.modal_close_btn:focus:after {
     position: absolute;
     content: '';
     top: 0;
@@ -732,19 +735,29 @@ p {
     overflow: hidden;
 }
 
-.modal_footer {
-    margin-top: 20px;
+.result_links {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
 }
 
-.modal_footer:after {
+.result_links:after {
     display: block;
     content: '';
     clear: both;
 }
 
+.result_link {
+    float: left;
+}
+
+.result_link + .result_link {
+    margin-left: 5px;
+}
+
 .modal_btn {
-    float: right;
     vertical-align: top;
+    display: inline-block;
     box-sizing: border-box;
     width: 80px;
     height: 40px;
@@ -757,12 +770,9 @@ p {
     font-weight: bold;
 }
 
-.modal_btn:hover {
+.modal_btn:hover,
+.modal_btn:focus {
     background-color: #145374;
-}
-
-.modal_btn + .modal_btn {
-    margin-right: 5px;
 }
 
 @-webkit-keyframes blink{
