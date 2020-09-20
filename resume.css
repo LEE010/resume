@@ -428,14 +428,14 @@ p {
 
 .exp_head {
     display: block;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .exp_subhead {
     color: #6e6d6d;
     margin-top: 10px;
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .exp_detail {
