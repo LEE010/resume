@@ -1,0 +1,59 @@
+resultData = {
+    "empty": {"skills":[], "summary":{}, "links":{}},
+    "boostcamp": {
+        "skills": ["js","nodejs"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "study": "https://www.notion.so/d1866a0f375742eea9017fda19552330?v=4688edd711d14758b1d8801212072ba2",
+            "code": "https://www.notion.so/3fdfdb675ff3408ea646507a3f791629?v=bef069a1157249af96ea19710c6dff71",
+            "relay2":"https://gist.github.com/LEE010/a46147041c41f16741a673a1c822e870",
+            "relay3":"https://gist.github.com/LEE010/76457491e948d1f69b4cb3790caa1254",
+            "relay4":"https://gist.github.com/LEE010/7c1ad8d8e18879e25114c14cc78b0901"
+        }
+    },
+    "cs50": {
+        "skills": ["c"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "code":"https://github.com/LEE010/boost_codingnewbie"
+        }
+    },
+    "dsc2019": {
+        "skills": ["python"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "result":"https://www.notion.so/AI-f3b0f460c81348d7abfab265c31abce6"
+        }
+    },
+    "deep-studio": {
+        "skills": ["python","django","bootstrap"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "code":"https://github.com/LEE010/DeepStudioCatalog",
+            "live":"https://deep-studio.herokuapp.com/ "
+        }
+    },
+    "pommelier": {
+        "skills": ["python","django","bootstrap"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "code":"https://github.com/LEE010/bigdata-project-wine",
+            "live":"https://pommelier.herokuapp.com/"
+        }
+    },
+    "minor-market": {
+        "skills": ["ruby","rails","bootstrap"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "code":"https://github.com/LEE010/one-two-rails",
+            "live":"https://one-two-test.herokuapp.com/"
+        }
+    }
+    ,"alggago": {
+        "skills": ["ruby"],
+        "summary": {"활동내용": ""},
+        "links": {
+            "code":"https://github.com/LEE010/alggago"
+        }
+    }
+}

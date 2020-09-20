@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="resume.css">
     <title>이동현 | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script type="text/javascript" src="./json/abouts.json"></script>
+    <script type="text/javascript" src="./json/exps.json"></script>
+    <script type="text/javascript" src="./json/results.json"></script>
 </head>
 <body>
-    <div class="wrap">
+    <div id="app" class="wrap">
         <header class="resume_header">
             <h1 class="page_title">
-                <a href="#intro" class="page_logo">
+                <a href="#" class="page_logo">
                     <span class="logo_txt">LDH's Web Portfolio.</span>
                 </a>
             </h1>
@@ -40,42 +44,18 @@
                     개발자로서 <span class="about_point">지속적인 성장</span>을 위해 최선을 다합니다.
                 </h3>
                 <ul class="about_items">
-                    <li class="about_item">
+                    <li class="about_item" v-for="about in abouts">
                         <div class="about_thumb">
-                            <img src="./images/icons/icon-open-book.png" alt="" class="about_img" width="100" height="100">
+                            <img :src="getImgUrl(about.icon)" :alt="about.icon" class="about_img" width="100" height="100">
                         </div>
                         <div class="about_content">
-                            <strong class="about_head">기본기</strong>
-                            <p class="about_body">
-                                신입 개발자로서 성장을 위해 가장 필요한 것은 기본기라고 생각합니다. 이러한 생각으로 여러 활동들에 참여하며 꾸준히 공부하고 있습니다.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="about_item">
-                        <div class="about_thumb">
-                            <img src="./images/icons/icon-challenge.png" alt="" class="about_img" width="100" height="100">
-                        </div>
-                        <div class="about_content">
-                            <strong class="about_head">도전</strong>
-                            <p class="about_body">
-                                필요하다면 분야를 가리지 않고 망설임 없이 도전하는 모습으로 FE, BE, ML, 데이터 분석등 다양한 활동을 경험할 수 있었습니다.
-                            </p>
-                        </div>
-                    </li>
-                    <li class="about_item">
-                        <div class="about_thumb">
-                            <img src="./images/icons/icon-community.png" alt="" class="about_img" width="100" height="100">
-                        </div>
-                        <div class="about_content">
-                            <strong class="about_head">협업</strong>
-                            <p class="about_body">
-                                개발과 관련된 협업 뿐만이 아니라 건설 현장 일용직 기술자, 주방보조 등 여러 분야를 직접 경험하며 살아있는 협업에 대하여 배웠습니다.
-                            </p>
+                            <strong class="about_head">{{ about.head }}</strong>
+                            <p class="about_body">{{ about.body }}</p>
                         </div>
                     </li>
                 </ul>
                 <div class="about_ending">
-                    이러한 역량을 바탕으로 치열하게 배우며 일할 <span class="about_point">준비</span>가 되어있습니다.
+                    이러한 역량을 바탕으로 치열하게 배우며 일할 <span class="about_point">준비가 되어있습니다</span>.
                 </div>
             </div>
         </section>
@@ -87,23 +67,21 @@
             <em class="notice">결과물을 보고싶으시면 아이콘을 클릭해주세요.</em>
             <div class="exp_wrap">
                 <ul class="exps">
-                    <li class="exp">
+                    <li class="exp" v-for="exp in exps">
                         <div class="exp_date">
-                            <div class="date_start"><span class="date">2020/09/18</span></div>
-                            <div class="date_end"><span class="date">2020/09/18</span></div>
+                            <div class="date_start"><span class="date">{{exp.start}}</span></div>
+                            <div class="date_end"><span class="date">{{exp.end}}</span></div>
                         </div>
                         <div class="exp_info">
-                            <strong class="exp_head">별 헤는 밤</strong>
-                            <div class="exp_subhead">윤동주</div>
-                            <p class="exp_detail">
-                                별이 언덕 다 까닭입니다. 사람들의 이름과, 위에 쉬이 내 있습니다. 강아지, 경, 부끄러운 있습니다. 사랑과 이름자 피어나듯이 봄이 잠, 밤이 까닭이요, 계십니다. 비둘기, 별 쉬이 소녀들의 너무나 라이너 이름과, 까닭입니다. 가을로 이름과, 이름을 하늘에는 나는 버리었습니다. 이국 별 나의 벌레는 있습니다. 봄이 마리아 이름자 멀듯이, 말 하나에 이름자를 까닭입니다. 다 토끼, 언덕 까닭이요, 별 이런 계절이 어머니, 까닭입니다. 부끄러운 벌레는 별 있습니다.
-                            </p>
-                            <div class="exp_results">
+                            <strong class="exp_head">{{ exp.name }}</strong>
+                            <div class="exp_subhead">{{ exp.subname }}</div>
+                            <p class="exp_detail">{{ exp.content }}</p>
+                            <div class="exp_results" v-show="exp.results.length > 0">
                                 <strong class="results_title">Results.</strong>
                                 <ul class="results">
-                                    <li class="result">
-                                        <button href="" class="result_icon">
-                                            <span class="blind">projectName</span>
+                                    <li class="result" v-for="res in exp.results">
+                                        <button class="result_icon" :class="getLogoClass(res)" :title="res" @click="updateResModal(res)">
+                                            <span class="blind">{{ res }}</span>
                                         </button>
                                     </li>
                                 </ul>
@@ -143,38 +121,64 @@
         <footer class="resume_footer">
             <p>Copyright &copy; 2020 LDH All rights reserved.</p>
         </footer>
-    </div>
 
-    <div class="result_modal">
-        <div class="modal">
-            <div class="modal_header">
-                <strong class="modal_title">ResultName</strong>
-                <button class="modal_close_btn"><span class="blind">닫기</span></button>
-            </div>
-            <div class="modal_body">
-                <div class="modal_content">
-                    <span class="modal_content_head">Skills</span>
-                    <ul class="result_skills">
-                        <li class="result_skill"><span class="blind">sapmle</span></li>
-                    </ul>
+        <div id="res-modal" class="result_modal" v-show="showResModal">
+            <div class="modal">
+                <div class="modal_header">
+                    <h3 class="modal_title">{{curRes}}</h3>
                 </div>
-
-                <div class="modal_content">
-                    <span class="modal_content_head">별 헤는 밤</span>
-                    <p class="modal_content_item">
-                        별이 언덕 다 까닭입니다. 사람들의 이름과, 위에 쉬이 내 있습니다. 강아지, 경, 부끄러운 있습니다. 사랑과 이름자 피어나듯이 봄이 잠, 밤이 까닭이요, 계십니다. 비둘기, 별 쉬이 소녀들의 너무나 라이너 이름과, 까닭입니다. 가을로 이름과, 이름을 하늘에는 나는 버리었습니다. 이국 별 나의 벌레는 있습니다. 봄이 마리아 이름자 멀듯이, 말 하나에 이름자를 까닭입니다. 다 토끼, 언덕 까닭이요, 별 이런 계절이 어머니, 까닭입니다. 부끄러운 벌레는 별 있습니다.
-                    </p>
+                <div class="modal_body">
+                    <div class="modal_content">
+                        <span class="modal_content_head">Skills</span>
+                        <ul class="result_skills">
+                            <li class="result_skill" :class="getLogoClass(skill)" v-for="skill in results[curRes].skills">
+                                <span class="blind">{{ skill }}</span>
+                            </li>
+                        </ul>
+                    </div>
+    
+                    <div class="modal_content" v-for="(val, key) in results[curRes].summary">
+                        <span class="modal_content_head">{{ key }}</span>
+                        <p class="modal_content_item">{{ val }}</p>
+                    </div>
                 </div>
+                <ul class="result_links">
+                    <li class="result_link" v-for="(val, key) in results[curRes].links">
+                        <a class="modal_btn" target="_blank" :href="val">{{ key }}</a>
+                    </li>
+                </ul>
+                <button class="modal_close_btn" @click="showResModal = false"><span class="blind">닫기</span></button>
             </div>
-            <ul class="result_links">
-                <li class="result_link">
-                    <a href="" class="modal_btn">Link1</a>
-                </li>
-                <li class="result_link">
-                    <a href="" class="modal_btn">Link2</a>
-                </li>
-            </ul>
         </div>
     </div>
+
+    <script>
+        // Vue.component('modal', {
+        //   template: '#res-modal'
+        // });
+        var app = new Vue({
+            el: "#app",
+            data: {
+                showResModal: false,
+                curRes: 'empty',
+                abouts: aboutData,
+                exps: expData,
+                results: resultData
+            },
+            methods: {
+                getImgUrl(id) {
+                    return './images/icons/icon-' + id + '.png'
+                },
+                getLogoClass(id) {
+                    return 'logo_' + id
+                },
+                updateResModal(name) {
+                    this.curRes = name;
+                    this.showResModal = true;
+                }
+            }
+        });
+    </script>
 </body>
+
 </html>

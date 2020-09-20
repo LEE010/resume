@@ -387,6 +387,12 @@ p {
     display: block;
 }
 
+.exp + .exp {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid #f2f4f7;
+}
+
 .exp_date {
     float: left;
     width: 200px;
@@ -444,7 +450,7 @@ p {
 }
 
 .exp_results {
-    margin-top: 20px;
+    margin-top: 35px;
 }
 
 .results_title {
@@ -477,7 +483,21 @@ p {
 }
 
 .results {
-    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.results:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.result {
+    float: left;    
+}
+
+.result + .result {
+    margin-left: 15px;
 }
 
 .result_icon {
@@ -487,6 +507,15 @@ p {
     background-color: #6e6d6d;
     border-radius: 20px;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 100px 100px;
+    background-position: center;
+    border: 2px solid #f2f4f7;
+}
+
+.result_icon:hover,
+.result_icon:focus {
+    border-color: #145374;
 }
 
 .result_icon:hover:after,
@@ -498,6 +527,34 @@ p {
     right: 0;
     bottom: 0;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.logo_boostcamp {
+    background-image: url(./images/icons/logo-boostcamp.png);
+}
+
+.logo_cs50 {
+    background-image: url(./images/icons/logo-cs50.png);
+}
+
+.logo_dsc2019 {
+    background-image: url(./images/thumb/logo-dsc2019.jpg);
+}
+
+.logo_deep-studio {
+    background-image: url(./images/thumb/logo-deep-studio.jpg);
+}
+
+.logo_pommelier {
+    background-image: url(./images/thumb/logo-pommelier.jpg);
+}
+
+.logo_minor-market {
+    background-image: url(./images/thumb/logo-minor-market.jpg);
+}
+
+.logo_alggago {
+    background-image: url(./images/icons/logo-alggago.png);
 }
 
 .resume_contact {
@@ -626,7 +683,6 @@ p {
 }
 
 .result_modal {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -654,7 +710,7 @@ p {
     min-height: 250px;
     background-color: #f2f4f7;
     border-radius: 25px;
-    padding: 25px 25px 65px;
+    padding: 25px 25px 85px;
 }
 
 .modal_header {
@@ -673,8 +729,8 @@ p {
 
 .modal_close_btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 25px;
     width: 25px;
     height: 25px;
     background-image: url(./images/icons/icon-close.png);
@@ -727,12 +783,59 @@ p {
 }
 
 .result_skill {
-    display: inline-block;
+    float: left;
     width: 80px;
     height: 80px;
-    background-color: #6e6d6d;
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: 80px 80px;
+    background-position: center;
+    background-color: #fff;
+}
+
+.result_skill + .result_skill {
+    margin-left: 10px;
+}
+
+.logo_js {
+    background-image: url(./images/icons/icon-js.png);
+}
+
+.logo_nodejs {
+    background-image: url(./images/icons/icon-nodejs.png);
+}
+
+.logo_c {
+    background-image: url(./images/icons/icon-c.png);
+}
+
+.logo_python {
+    background-image: url(./images/icons/icon-python.png);
+}
+
+.logo_django {
+    background-image: url(./images/icons/icon-django.png);
+}
+
+.logo_bootstrap {
+    background-image: url(./images/icons/icon-bootstrap.png);
+}
+
+.logo_ruby {
+    background-image: url(./images/icons/icon-ruby.png);
+}
+
+.logo_rails {
+    background-image: url(./images/icons/icon-rails.png);
+}
+
+.logo_ubuntu {
+    background-image: url(./images/icons/icon-ubuntu.png);
+}
+
+.logo_linux {
+    background-image: url(./images/icons/icon-linux.png);
 }
 
 .result_links {
@@ -759,10 +862,9 @@ p {
     vertical-align: top;
     display: inline-block;
     box-sizing: border-box;
-    width: 80px;
-    height: 40px;
-    line-height: 40px;
-    font: 18px;
+    padding: 10px 15px;
+    line-height: 20px;
+    font-size: 18px;
     background-color: #ee6f57;
     text-align: center;
     border-radius: 5px;
