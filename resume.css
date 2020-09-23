@@ -537,6 +537,10 @@ p {
     background-image: url(./images/icons/logo-cs50.png);
 }
 
+.logo_nts {
+    background-image: url(./images/icons/logo-nts.png);
+}
+
 .logo_dsc2019 {
     background-image: url(./images/thumb/logo-dsc2019.jpg);
 }
@@ -556,6 +560,11 @@ p {
 .logo_alggago {
     background-image: url(./images/icons/logo-alggago.png);
 }
+
+.logo_like-lion {
+    background-image: url(./images/icons/logo-like-lion.png);
+}
+
 
 .resume_contact {
     background-color: #d6e0f0;
@@ -707,48 +716,27 @@ p {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     width: 800px;
-    min-height: 250px;
     background-color: #f2f4f7;
     border-radius: 25px;
-    padding: 25px 25px 85px;
+    padding: 25px 25px 25px;
 }
 
 .modal_header {
-    position: relative;
+    padding-bottom: 25px;
 }
 
 .modal_title {
-    position: relative;
-    display: inline-block;
     font-size: 20px;
     line-height: 25px;
-    background-color: #f2f4f7;
-    padding: 0 3px;
     font-weight: bold;
 }
 
-.modal_close_btn {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 25px;
-    height: 25px;
-    background-image: url(./images/icons/icon-close.png);
-    background-size: 25px 25px;
+.modal_body {
+    max-height: 400px;
+    overflow-y: auto;
 }
 
-.modal_close_btn:hover:after,
-.modal_close_btn:focus:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-.modal_content {
+.modal_content + .modal_content {
     margin-top: 20px;
 }
 
@@ -798,6 +786,22 @@ p {
     margin-left: 10px;
 }
 
+.logo_html {
+    background-image: url(./images/icons/icon-html.png);
+}
+
+.logo_css {
+    background-image: url(./images/icons/icon-css.png);
+}
+
+.logo_gulp {
+    background-image: url(./images/icons/icon-gulp.png);
+}
+
+.logo_sass {
+    background-image: url(./images/icons/icon-sass.png);
+}
+
 .logo_js {
     background-image: url(./images/icons/icon-js.png);
 }
@@ -838,10 +842,14 @@ p {
     background-image: url(./images/icons/icon-linux.png);
 }
 
+.modal_footer {
+    margin-top: 25px;
+    text-align: right;
+    font-size: 0;
+}
+
 .result_links {
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
+    display: inline-block;
 }
 
 .result_links:after {
@@ -859,7 +867,6 @@ p {
 }
 
 .modal_btn {
-    vertical-align: top;
     display: inline-block;
     box-sizing: border-box;
     padding: 10px 15px;
@@ -867,7 +874,7 @@ p {
     font-size: 18px;
     background-color: #ee6f57;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 20px;
     color: #fff;
     font-weight: bold;
 }
@@ -875,6 +882,31 @@ p {
 .modal_btn:hover,
 .modal_btn:focus {
     background-color: #145374;
+}
+
+.modal_close_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    padding: 25px;
+    background-image: url(./images/icons/icon-close.png);
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    background-position: 25px;
+}
+
+.modal_close_btn:hover:after,
+.modal_close_btn:focus:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-top-right-radius: 25px;
 }
 
 @-webkit-keyframes blink{

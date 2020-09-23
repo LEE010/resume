@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="resume.css">
     <title>이동현 | Portfolio</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script type="text/javascript" src="./json/abouts.json"></script>
-    <script type="text/javascript" src="./json/exps.json"></script>
-    <script type="text/javascript" src="./json/results.json"></script>
+    <script src="./vue.js"></script>
+    <script type="text/javascript" src="./data.js"></script>
 </head>
 <body>
     <div id="app" class="wrap">
@@ -129,7 +127,7 @@
                 </div>
                 <div class="modal_body">
                     <div class="modal_content">
-                        <span class="modal_content_head">Skills</span>
+                        <span class="modal_content_head">주요기술</span>
                         <ul class="result_skills">
                             <li class="result_skill" :class="getLogoClass(skill)" v-for="skill in results[curRes].skills">
                                 <span class="blind">{{ skill }}</span>
@@ -137,26 +135,27 @@
                         </ul>
                     </div>
     
-                    <div class="modal_content" v-for="(val, key) in results[curRes].summary">
-                        <span class="modal_content_head">{{ key }}</span>
-                        <p class="modal_content_item">{{ val }}</p>
+                    <div class="modal_content" v-for="(content, head) in results[curRes].contents">
+                        <span class="modal_content_head">{{ head }}</span>
+                        <p class="modal_content_item">{{ content }}</p>
                     </div>
                 </div>
-                <ul class="result_links">
-                    <li class="result_link" v-for="(val, key) in results[curRes].links">
-                        <a class="modal_btn" target="_blank" :href="val">{{ key }}</a>
-                    </li>
-                </ul>
-                <button class="modal_close_btn" @click="showResModal = false"><span class="blind">닫기</span></button>
+                <div class="modal_footer">
+                    <ul class="result_links">
+                        <li class="result_link" v-for="(link, name) in results[curRes].links">
+                            <a class="modal_btn" target="_blank" :href="link">{{ name }}</a>
+                        </li>
+                    </ul>
+                    <button class="modal_close_btn" @click="showResModal = false">
+                        <span class="blind">닫기</span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        // Vue.component('modal', {
-        //   template: '#res-modal'
-        // });
-        var app = new Vue({
+        new Vue({
             el: "#app",
             data: {
                 showResModal: false,
