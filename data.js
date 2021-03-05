@@ -1,48 +1,54 @@
-var aboutData = [
-    {
-        "icon":"basic",
-        "head":"기본기",
-        "body":"신입 개발자로서 성장을 위해 가장 필요한 것은 기본기라고 생각합니다. 이러한 생각으로 여러 활동에 참여하며 꾸준히 공부하고 있습니다."
+var aboutData = [{
+        "icon": "basic",
+        "head": "기본기",
+        "body": "신입 개발자로서 성장을 위해 가장 필요한 것은 기본기라고 생각합니다. 이러한 생각으로 여러 활동에 참여하며 꾸준히 공부하고 있습니다."
     },
     {
-        "icon":"challenge",
-        "head":"도전",
-        "body":"필요하다면 분야를 가리지 않고 망설임 없이 도전하는 모습으로 FE, BE, ML, 데이터 분석 등 다양한 활동을 경험할 수 있었습니다."
+        "icon": "challenge",
+        "head": "도전",
+        "body": "필요하다면 분야를 가리지 않고 망설임 없이 도전하는 모습으로 FE, BE, ML, 데이터 분석 등 다양한 활동을 경험하였습니다."
     },
     {
-        "icon":"cooperation",
-        "head":"협업",
-        "body":"개발과 관련된 협업뿐만이 아니라 건설 현장 일용직 기술자, 주방보조 등 여러 분야를 직접 경험하며 살아있는 협업에 대하여 배웠습니다."
+        "icon": "cooperation",
+        "head": "협업",
+        "body": "개발과 관련된 협업뿐만이 아니라 여러 사회경험을 통해 직접 경험하며 협업하는 방법에 대하여 배웠습니다."
     }
 ];
 
-var expData = [
+var expData = [{
+        "name": "부스트캠프 - AI Tech",
+        "subname": "ML 엔지니어",
+        "start": "2021/01/18",
+        "end": "참여중",
+        "content": "커넥트 재단에서 머신러닝 엔지니어 양성을 목표로 진행하는 부스트캠프 AI Tech 과정에 참여하고 있습니다.",
+        "results": ["bcai"]
+    },
     {
-        "name":"부스트캠프 - 챌린지",
+        "name": "부스트캠프 - 챌린지",
         "subname": "웹 풀스택",
         "start": "2020/07/27",
         "end": "2020/08/21",
-        "content": "커넥트 재단에서 진행한 부스트캠프 챌린지 과정에 참여하여 JS를 기반으로 개발 기본기에 대하여 심화 학습하였습니다.",
-        "results": ["boostcamp"]  
+        "content": "커넥트 재단에서 진행한 부스트캠프 웹 풀스택 챌린지 과정에 참여하여 JS를 기반으로 개발 기본기에 대하여 심화 학습하였습니다.",
+        "results": ["boostcamp"]
     },
     {
-        "name":"부스트 코딩뉴비 챌린지",
+        "name": "부스트 코딩뉴비 챌린지",
         "subname": "리더 뉴비",
         "start": "2020/07/10",
         "end": "2020/08/28",
         "content": "커넥트 재단에서 진행한 온라인 스터디 프로그램 부스트 코딩뉴비 챌린지에 리더 뉴비로 참여하여 활동하였습니다.",
-        "results": ["cs50"]  
+        "results": ["cs50"]
     },
     {
-        "name":"엔테크서비스",
+        "name": "엔테크서비스",
         "subname": "UI 개발 인턴",
         "start": "2020/01/06",
         "end": "2020/02/29",
         "content": "엔테크서비스의 UI 개발 인턴에 참여하여 HTML, CSS 등 마크업 관련 교육을 받았습니다.",
-        "results": ["nts"]  
+        "results": ["nts"]
     },
     {
-        "name":"Data Science Compatition 2019",
+        "name": "Data Science Compatition 2019",
         "subname": "서울대학교 통계연구소",
         "start": "2019/04/01",
         "end": "2019/05/10",
@@ -50,39 +56,52 @@ var expData = [
         "results": ["dsc2019"]
     },
     {
-        "name":"Posco 청년 AI·Big Data Academy",
+        "name": "Posco 청년 AI·Big Data Academy",
         "subname": "포스코 인재창조원, 포항공과대학교 정보통신연구소",
         "start": "2019/01/07",
         "end": "2019/04/05",
         "content": "3개월간 포항에서 숙식하며 Python3 기반으로 통계, 빅데이터, 머신러닝, 딥러닝을 학습하였습니다. 빅데이터와 AI에 대해 각각 팀 프로젝트를 수행하였고, AI프로젝트에서 '우수상'을 받았습니다.",
-        "results": ["deep-studio","pommelier"]  
+        "results": ["deep-studio", "pommelier"]
     },
     {
-        "name":"멋쟁이 사자처럼",
+        "name": "멋쟁이 사자처럼",
         "subname": "교내 운영진",
         "start": "2018/01/01",
         "end": "2019/01/04",
         "content": "전국 연합 웹 개발 동아리 멋쟁이 사자처럼 6기 교내 운영진으로 활동하며 동아리원의 교육을 전담하였습니다. 최종 과제로 '마이너 콘텐츠 플리마켓, minor-market'을 기획, 설계, 구현하였습니다.",
-        "results": ["like-lion","minor-market"]  
+        "results": ["like-lion", "minor-market"]
     }
 ];
 
 var resultData = {
-    "empty": {"skills":[], "contents":{}, "links":{}},
+    "empty": {
+        "skills": [],
+        "contents": {},
+        "links": {}
+    },
+    "bcai": {
+        "skills": ["python", "pytorch"],
+        "contents": {
+            "활동내용": "Edwith를 기반으로 매일 업로드되는 강의를 통해 학습하고 있으며, 강의에 기반한 퀴즈, 과제를 수행하고 매일 진행되는 피어세션을 통해 동료들과 함께 복습하고 토론하며 학습 내용들을 소화하고 있습니다."
+        },
+        "links": {
+            "study": "https://www.notion.so/AI-Tech-2b11c9e5a685431988a598ae42b72e3b",
+        }
+    },
     "boostcamp": {
-        "skills": ["js","nodejs"],
+        "skills": ["js", "nodejs"],
         "contents": {
             "활동내용": "Slack과 Zoom을 통해 비대면으로 진행된 교육으로, 매일 개발에 필요한 전반적인 기본 내용을 깊게 공부해보는 미션들을 수행하였습니다.",
             "피어세션": "매일 아침 스터디 그룹원들이 수행한 미션 코드를 확인하고 분석하여 화상 회의를 통해 코드리뷰를 진행하였습니다.",
-            "릴레이 프로젝트":"매주 금요일, 이전 팀에서 수행하던 프로젝트를 이어서 진행하는 릴레이 프로젝트를 수행하였습니다. 총 4번의 릴레이 프로젝트 중 3번의 릴레이 프로젝트에서 HTML, CSS를 활용한 UI를 구현하였습니다.",
+            "릴레이 프로젝트": "매주 금요일, 이전 팀에서 수행하던 프로젝트를 이어서 진행하는 릴레이 프로젝트를 수행하였습니다. 총 4번의 릴레이 프로젝트 중 3번의 릴레이 프로젝트에서 HTML, CSS를 활용한 UI를 구현하였습니다.",
             "결과": "기존에 이해만 하고 넘어갔던 내용을 직접 구현하기 위해 고민해보면서 조금 더 깊게 이해할 수 있었습니다. 또한 비대면으로 미션과 코드리뷰, 릴레이 프로젝트를 수행하면서 재택 근무를 간접 경험할 수 있었습니다."
         },
         "links": {
             "study": "https://www.notion.so/d1866a0f375742eea9017fda19552330?v=4688edd711d14758b1d8801212072ba2",
             "code": "https://www.notion.so/3fdfdb675ff3408ea646507a3f791629?v=bef069a1157249af96ea19710c6dff71",
-            "relay W2":"https://gist.github.com/LEE010/a46147041c41f16741a673a1c822e870",
-            "relay W3":"https://gist.github.com/LEE010/76457491e948d1f69b4cb3790caa1254",
-            "relay W4":"https://gist.github.com/LEE010/7c1ad8d8e18879e25114c14cc78b0901"
+            "relay W2": "https://gist.github.com/LEE010/a46147041c41f16741a673a1c822e870",
+            "relay W3": "https://gist.github.com/LEE010/76457491e948d1f69b4cb3790caa1254",
+            "relay W4": "https://gist.github.com/LEE010/7c1ad8d8e18879e25114c14cc78b0901"
         }
     },
     "cs50": {
@@ -93,11 +112,11 @@ var resultData = {
             "결과": "팀원들에게 정확한 내용을 전달하기 위하여 CS50 강의를 수강하며 언급되는 개발에 필요한 기본적인 아이디어들과 개념들을 꼼꼼히 복습할 수 있었고, 팀원들이 참고할 수 있도록 입문자가 봐도 이해하기 쉬울 만큼 코드를 작성하려 노력하며 조금 더 가독성 높은 코드를 작성할 수 있게 되었습니다."
         },
         "links": {
-            "code":"https://github.com/LEE010/boost_codingnewbie"
+            "code": "https://github.com/LEE010/boost_codingnewbie"
         }
     },
     "nts": {
-        "skills": ["html","css","sass","gulp"],
+        "skills": ["html", "css", "sass", "gulp"],
         "contents": {
             "활동내용": "2개월 동안 인턴 교육 프로그램에 참여하며 사내 강의와 멘토링을 통해 마크업 집중 교육을 받았습니다.",
             "과정": "강의를 통해 실무에서 사용되는 HTML, CSS 활용법들에 대하여 학습할 수 있었고, 개인 미션을 통해 직접 구현해보며 익숙해질 수 있었습니다.",
@@ -117,12 +136,12 @@ var resultData = {
             "과정": "Jupyter Notebook을 활용하였고, 데이터 확인, 전처리와 같은 데이터 조작은 Pandas를, 데이터 시각화는 Seaborn, 분석은 Scipy의 통계 모듈을 이용하여 진행하였습니다.",
         },
         "links": {
-            "result":"https://www.notion.so/AI-f3b0f460c81348d7abfab265c31abce6",
-            "code":"https://github.com/LEE010/DSC2019"
+            "result": "https://www.notion.so/AI-f3b0f460c81348d7abfab265c31abce6",
+            "code": "https://github.com/LEE010/DSC2019"
         }
     },
     "deep-studio": {
-        "skills": ["python","django","bootstrap","linux"],
+        "skills": ["python", "django", "bootstrap", "linux"],
         "contents": {
             "기간": "2019/03/08 - 2019/04/03",
             "팀구성": "영상합성(4), 음성합성(3)",
@@ -135,21 +154,21 @@ var resultData = {
             "음성합성 체험 페이지 구현": "음성합성 기능을 체험해 볼 수 있는 페이지를 구현하였습니다.",
         },
         "links": {
-            "code":"https://github.com/LEE010/bigdata-project-wine",
-            "live":"https://pommelier.herokuapp.com/"
+            "code": "https://github.com/LEE010/bigdata-project-wine",
+            "live": "https://pommelier.herokuapp.com/"
         }
     },
-    "pommelier":{
-        "skills": ["python","django","bootstrap","linux"],
+    "pommelier": {
+        "skills": ["python", "django", "bootstrap", "linux"],
         "contents": {
             "기간": "2019/02/18 - 2019/02/28",
             "팀구성": "와인 품질 검증(2), 와인 선호도 분석(2), 추천 시스템(3)",
             "역할": "추천 시스템(데이터 수집, 라벨링, 전처리), 웹 구현",
             "내용": "Big data과정 최종 팀 프로젝트로 경영 위기 상황을 가정하고 새로운 사업을 제안하는 비즈니스 케이스를 주제로 데이터 분석 과제 수행",
-            "비즈니스 케이스":"수입 주류 판매 회사에서 주 종목인 맥주의 수익이 크게 감소하였고, 따라서 새로운 시장인 와인 시장개척을 통해 위기를 극복해야 함.",
+            "비즈니스 케이스": "수입 주류 판매 회사에서 주 종목인 맥주의 수익이 크게 감소하였고, 따라서 새로운 시장인 와인 시장개척을 통해 위기를 극복해야 함.",
             "과제 1": "와인 생산자가 와인의 등급을 임의로 올려 수입 원가가 15% 상승함, 이에 따라 와인 정확한 등급을 분류해야 함",
             "과제 2": "고객군별, 곁들이는 음식 별로 선호하는 와인이 다르므로 맞춤 추천 시스템 필요함",
-            "주어진 데이터":"와인 평점과 성분, 와인 블라인드 테스트 평가 결과, 블라인드 테스트에서 사용된 와인의 성향",
+            "주어진 데이터": "와인 평점과 성분, 와인 블라인드 테스트 평가 결과, 블라인드 테스트에서 사용된 와인의 성향",
             "데이터 수집": "와인 추천 시스템을 구현하는데 와인의 유형 데이터만 제공되었기 때문에 실제 와인 데이터를 Beautiful Soup를 이용하여 수집하고 키워드 분석을 통해 특정 품종의 와인을 블라인드 테스트의 와인 성향으로 유추하였습니다.",
             "와인 성분 데이터 전처리": "와인 성분 데이터에서 와인 등급을 기준으로 box plot과 scatter plot을 통해 등급 별 이상치를 확인하였습니다. 표본의 개수가 많은 등급은 다른 연관된 성분들과 확인하고 이상치라고 판단되었을 때 제거하였고, 표본의 개수가 적은 등급은 연관 성분과의 관계를 비교하여 평균값, 3 분위 값 등으로 바꾸는 작업을 진행했습니다.",
             "와인 유형 라벨링": "와인 추천 알고리즘 구현을 위해 instacart의 와인 이름을 Wine Spectator의 결과로 라벨링 하였습니다.",
@@ -158,8 +177,8 @@ var resultData = {
             "와인 등급 검증 페이지 구현": "Python pickle 모듈을 활용하여 SVM 와인 평가 모델을 적용하였고, 입력받은 값에 따라 와인 등급을 판별할 수 있게 구현하였습니다.",
         },
         "links": {
-            "code":"https://github.com/LEE010/DeepStudioCatalog",
-            "live":"https://deep-studio.herokuapp.com/ "
+            "code": "https://github.com/LEE010/DeepStudioCatalog",
+            "live": "https://deep-studio.herokuapp.com/ "
         }
     },
     "like-lion": {
@@ -175,7 +194,7 @@ var resultData = {
         "links": {}
     },
     "minor-market": {
-        "skills": ["ruby","rails","bootstrap","linux"],
+        "skills": ["ruby", "rails", "bootstrap", "linux"],
         "contents": {
             "기간": "2018/09/03 - 2018/12/12",
             "팀구성": "개인",
@@ -194,9 +213,9 @@ var resultData = {
             "결과": 'SNS의 기능과 쇼핑몰의 기능을 결합하면서 다양한 기능들의 구현에 대하여 고민해 볼 수 있었습니다.'
         },
         "links": {
-            "detail":"https://www.notion.so/minor-market-one-two-7810a0d1b82343289c4deedec2175c7a",
-            "code":"https://github.com/LEE010/one-two-rails",
-            "live":"https://one-two-test.herokuapp.com/"
+            "detail": "https://www.notion.so/minor-market-one-two-7810a0d1b82343289c4deedec2175c7a",
+            "code": "https://github.com/LEE010/one-two-rails",
+            "live": "https://one-two-test.herokuapp.com/"
         }
     },
 };
