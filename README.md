@@ -1,6 +1,6 @@
 # LDH's Web Resume v2
-이전에 HTML, CSS를 기본으로 CDN을 이용해 간단한 반복 요소 Vue.js로 처리했던 것을 Vue CLI로 바꾸는 작업을 진행합니다.
-
+이전에 HTML, CSS를 기본으로 CDN을 이용해 간단한 반복 요소 Vue.js로 처리했던 것을 Vue CLI로 바꾸는 작업을 진행합니다.    
+자세한 진행과정은 [Vue CLI로 포트폴리오 만들기](https://www.notion.so/Vue-CLI-0c27d6c471004814b85a1ad9e83b86b2) 를 참고해주세요.
 
 ## 개발 환경
 - OS: Ubuntu 18.04.5
