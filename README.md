@@ -3,7 +3,7 @@
 
 
 ## 개발 환경
-- OS: Ubuntu 18.04
+- OS: Ubuntu 18.04.5
 - node: 12.8.3
 - npm: 6.4.1
 - Vue CLI: 4.5.12
