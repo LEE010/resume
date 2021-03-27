@@ -1,30 +1,50 @@
+
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+    <NavBar />
+    <router-view />
+    <Footer />
+    <ResultModal
+      v-show="state.resModalVisible"
+      :resultName="state.curResName"
+      v-bind="results[state.curResName]"
+      @closeResModal="closeResModal"
+    />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { useStore } from 'vuex'
+import { results } from '@/data.json'
+import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+import ResultModal from '@/components/ResultModal'
 
-#nav {
-  padding: 30px;
+export default {
+  name: 'App',
+  setup () {
+    const state = useStore().state
+    const emitter = state.emitter
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+    emitter.on('showResModal', (resName) => {
+      state.curResName = resName
+      state.resModalVisible = true
+    })
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+    emitter.on('closeResModal', () => {
+      state.curResName = 'empty'
+      state.resModalVisible = false
+    })
+
+    return { emitter, state }
+  },
+  components: {
+    NavBar, Footer, ResultModal
+  },
+  data () {
+    return { results }
   }
 }
+</script>
+
+<style lang="scss">
+  @import url(assets/scss/main.scss);
 </style>
