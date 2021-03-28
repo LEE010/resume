@@ -3,7 +3,7 @@
         <strong class="results_title">Results.</strong>
         <ul class="results">
             <li class="result" v-for="res in expResults" :key="'result'+ res">
-                <button class="result_icon" :class="'logo_' + res" :title="res" @click="setResModal(res)">
+                <button class="result_icon" :class="'logo_' + res" :title="res" @click="showResModal(res)">
                     <span class="blind">{{ res }}</span>
                 </button>
             </li>
@@ -19,11 +19,11 @@ export default {
   setup () {
     const emitter = useStore().state.emitter
 
-    const setResModal = (resName) => {
+    const showResModal = (resName) => {
       emitter.emit('showResModal', resName)
     }
 
-    return { setResModal }
+    return { showResModal }
   },
   props: {
     expResults: Array
