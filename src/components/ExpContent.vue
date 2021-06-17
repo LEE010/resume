@@ -8,7 +8,7 @@
             <strong class="exp_head">{{ exp.name }}</strong>
             <div class="exp_subhead">{{ exp.subname }}</div>
             <p class="exp_detail">{{ exp.content }}</p>
-            <ExpContentResults v-if="exp.results.length > 0" :expResults="exp.results"/>
+            <exp-content-results v-if="exp.results.length > 0" :expResults="exp.results"/>
         </div>
     </li>
 </template>
@@ -18,7 +18,9 @@ import ExpContentResults from '@/components/ExpContentResults'
 
 export default {
   name: 'ExpContent',
-  components: { ExpContentResults },
+  components: {
+    ExpContentResults
+  },
   props: {
     exp: Object
   }

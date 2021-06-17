@@ -1,23 +1,22 @@
 <template>
-    <Intro />
-    <About :abouts="abouts" />
-    <Exps :exps="exps"/>
-    <Contact />
+    <resume-intro />
+    <resume-about />
+    <resume-exps :exps="exps"/>
+    <resume-contact />
 </template>
 
 <script>
-import { abouts, exps } from '@/data.json'
-import Intro from '@/components/Intro'
-import About from '@/components/About'
-import Exps from '@/components/Exps'
-import Contact from '@/components/Contact'
+import { exps } from '@/data.json'
+import ResumeIntro from '@/components/Intro'
+import ResumeAbout from '@/components/About'
+import ResumeExps from '@/components/Exps'
+import ResumeContact from '@/components/Contact'
 
 export default {
   name: 'Home',
-  components: { Intro, About, Exps, Contact },
+  components: { ResumeIntro, ResumeAbout, ResumeExps, ResumeContact },
   data () {
     return {
-      abouts,
       exps
     }
   }
