@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'About',
+  name: 'ResumeAbout',
   props: ['abouts']
 }
 </script>

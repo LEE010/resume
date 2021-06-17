@@ -1,9 +1,9 @@
 
 <template>
-    <NavBar />
+    <nav-bar />
     <router-view />
-    <Footer />
-    <ResultModal
+    <resume-footer />
+    <result-modal
       v-show="state.resModalVisible"
       :resultName="state.curResName"
       v-bind="results[state.curResName]"
@@ -15,7 +15,7 @@
 import { useStore } from 'vuex'
 import { results } from '@/data.json'
 import NavBar from '@/components/NavBar'
-import Footer from '@/components/Footer'
+import ResumeFooter from '@/components/Footer'
 import ResultModal from '@/components/ResultModal'
 
 export default {
@@ -37,7 +37,9 @@ export default {
     return { emitter, state }
   },
   components: {
-    NavBar, Footer, ResultModal
+    NavBar,
+    ResumeFooter,
+    ResultModal
   },
   data () {
     return { results }

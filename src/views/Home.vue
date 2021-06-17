@@ -1,8 +1,8 @@
 <template>
-    <Intro />
-    <About :abouts="abouts" />
-    <Exps :exps="exps"/>
-    <Contact />
+    <intro />
+    <about :abouts="abouts" />
+    <exps :exps="exps"/>
+    <contact />
 </template>
 
 <script>

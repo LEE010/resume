@@ -28,6 +28,6 @@
 
 <script>
 export default {
-  name: 'Contact'
+  name: 'ResumeContact'
 }
 </script>
