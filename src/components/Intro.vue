@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'Intro'
+  name: 'ResumeIntro'
 }
 </script>
