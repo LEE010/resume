@@ -1,4 +1,4 @@
-# LDH's Web Resume v2
+# LDH's Web Resume v2.01
 이전에 HTML, CSS를 기본으로 CDN을 이용해 간단한 반복 요소 Vue.js로 처리했던 것을 Vue CLI로 바꾸는 작업을 진행합니다.    
 자세한 진행과정은 [Vue CLI로 포트폴리오 만들기](https://www.notion.so/Vue-CLI-0c27d6c471004814b85a1ad9e83b86b2) 를 참고해주세요.
 
@@ -27,3 +27,9 @@
 
 ### 추가 구현 사항
 - router를 활용하여 여러개의 view로 웹 페이지 구현
+
+## 개선 사항
+- 2021.06.17
+    - about 내용과 구성 변경
+    - 작은 viewport에서 UI 오작동 방지를 위한 페이지 min-width 설정
+    - template 내부의 컴포넌트 이름 수정
