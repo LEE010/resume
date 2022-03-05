@@ -1,7 +1,6 @@
 <template>
     <div class="exp_wrap">
         <ul class="exps">
-            <!-- {{exps}} -->
             <exp-content v-for="(exp, index) in exps" :key="'exp'+ index" :exp="exp"/>
         </ul>
     </div>
