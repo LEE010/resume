@@ -16,9 +16,9 @@
             "name": "사람인 HR",
             "subname": "웹 개발자",
             "start": "2022/07/05",
-            "end": "",
-            "content": "사람인 HR 개발자 공채 2기 인턴쉽 후 전환되었습니다. 현재 사람인 개발팀에 속하여 이력서를 주 업무로 사람인 서비스 개발에 참여하고 있습니다.",
-            "results": []
+            "end": "진행중",
+            "content": "사람인 HR 개발자 공채 2기 인턴십 후 전환되었습니다. 현재 사람인 개발팀에 속하여 이력서를 주 업무로 사람인 서비스 개발에 참여하고 있습니다.",
+            "results": ["saramin"]
         },
         {
             "name": "부스트캠프 - AI Tech",
@@ -84,6 +84,15 @@
             "contents": {},
             "links": {}
         },
+        "saramin": {
+            "skills": ["php", "js", "jquery", "mysql"],
+            "contents": {
+                "활동내용": "사람인개발팀에서 php Zend 프레임워크를 이용한 Backend와 jQuery를 이용한 Frontend를 구현하고 있습니다."
+            },
+            "links": {
+            }
+        },
+    
         "bcai": {
             "skills": ["python", "pytorch"],
             "contents": {
