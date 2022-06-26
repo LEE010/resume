@@ -924,22 +924,12 @@ p {
 
 .modal_footer {
     margin-top: 25px;
-    text-align: right;
+    text-align: left;
     font-size: 0;
 }
 
-.result_links {
-    display: inline-block;
-}
-
-.result_links:after {
-    display: block;
-    content: '';
-    clear: both;
-}
-
 .result_link {
-    float: left;
+    display: inline-block;
 }
 
 .result_link+.result_link {
