@@ -646,7 +646,7 @@ p {
 }
 
 .contact_wrap {
-    width: 1000px;
+    width: 800px;
     margin: 50px auto 0;
 }
 
@@ -813,37 +813,46 @@ p {
     margin-top: 20px;
 }
 
-.modal_content_head {
+.modal_content_head,
+.project_content_head,
+.project_skills_head {
     display: inline-block;
     font-size: 18px;
     line-height: 18px;
     font-weight: bold;
 }
 
-.modal_content_head:after {
+.modal_content_head:after,
+.project_content_head:after,
+.project_skills_head:after {
     content: '';
     display: block;
     height: 3px;
     background-color: #ee6f57;
 }
 
-.modal_content_item {
+.modal_content_item,
+.project_content_item {
     margin-top: 10px;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 26px;
+    line-break: anywhere;
 }
 
-.result_skills {
-    margin-top: 15px;
+.result_skills, 
+.project_skills {
+    margin-top: 20px;
 }
 
-.result_skills:after {
+.result_skills:after, 
+.project_skills:after {
     display: block;
     content: '';
     clear: both;
 }
 
-.result_skill {
+.result_skill,
+.project_skill {
     float: left;
     width: 80px;
     height: 80px;
@@ -1023,17 +1032,32 @@ p {
 }
 
 .project_title {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 24px;
+    line-height: 28px;
     display: inline-block;
 }
 
+.project_dates {
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 18px;
+}
+
+
+.project_date+.project_date:before {
+    content: '-';
+    padding: 0 5px 0;
+}
+
 .project_wrap.on .project_title:after {
-    display: block;
-    height: 2px;
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 10px;
+    margin-top: -7px;
+    border-radius: 5px;
     content: '';
     background-color: #ee6f57;
-    margin-top: 0px;
 }
 
 .project_content {
@@ -1043,7 +1067,7 @@ p {
 }
 
 .project_wrap.on .project_content {
-    max-height: 100px;
+    max-height: 800px;
 }
 
 .project_content:after {
@@ -1076,15 +1100,22 @@ p {
     background-image: url(../icons/upload.png);
 }
 
-/*
-.project_title:after {
-    display: block;
-    height: 5px;
-    content: '';
-    background-color: #ee6f57;
-    margin-top: -3px;
+.project_summary {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    color: #6e6d6d;
+    line-height: 26px;
+    line-break: anywhere;
 }
-*/
+
+.project_skills_wrap {
+    margin-top: 20px;
+}
+
+.project_content_detail {
+    margin-top: 30px;
+}
 
 @-webkit-keyframes blink {
     0% {
