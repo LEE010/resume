@@ -1,6 +1,5 @@
 <template>
     <div class="exp_results">
-        <strong class="results_title">Results.</strong>
         <ul class="results">
             <li class="result" v-for="res in expResults" :key="'result'+ res">
                 <button class="result_icon" :class="'logo_' + res" :title="res" @click="showResModal(res)">
